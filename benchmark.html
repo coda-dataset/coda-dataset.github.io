@@ -1,0 +1,685 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+        <title>CODA-Benchmark</title>         
+        <meta content="" name="description"> 
+        <meta content="" name="keywords"> 
+        <!-- Favicons -->         
+        <link href="assets/img/favicon.png" rel="icon"> 
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> 
+        <!-- Google Fonts -->         
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet"> 
+        <!-- Vendor CSS Files -->         
+        <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet"> 
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet"> 
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> 
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> 
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> 
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> 
+        <!-- Template Main CSS File -->         
+        <link href="assets/css/style_benchmark.css" rel="stylesheet"> 
+        <!-- =======================================================
+        * Template Name: Moderna - v4.2.0
+        * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->         
+    </head>     
+    <body> 
+        <!-- ======= Header ======= -->         
+        <header id="header" class="fixed-top d-flex align-items-center "> 
+            <div class="container d-flex justify-content-between align-items-center"> 
+                <div class="logo"> 
+                    <h1 class="text-light"><a href="index.html"><span>CODA</span></a></h1> 
+                    <!-- Uncomment below if you prefer to use an image logo -->                     
+                    <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->                     
+                </div>                 
+                <nav id="navbar" class="navbar"> 
+                    <ul> 
+                        <li>
+                            <a class="active" href="index.html">Home</a>
+                        </li>                         
+                        <li class="dropdown">
+                            <a href="documentation.html"><span>Documentation</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul> 
+                                <li>
+                                    <a href="documentation.html#data_format">Data Format</a>
+                                </li>                                 
+                                <li>
+                                    <a href="documentation.html#data_annotation">Data Annotation</a>
+                                </li>
+                            </ul>                             
+                        </li>                         
+                        <li class="dropdown">
+                            <a href="download.html"><span>Download</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li>
+                                    <a href="download.html#instructions">Instructions</a>
+                                </li>
+                                <li>
+                                    <a href="download.html#link">Links</a>
+                                </li>                                 
+                            </ul>                             
+                        </li>                         
+                        <li class="dropdown">
+                            <a href="benchmark.html"><span>Benchmark</span> <i class="bi bi-chevron-down"></i></a> 
+                            <ul> 
+                                <li>
+                                    <a href="benchmark.html#benchmark">CODA Benchmark</a>
+                                </li>                                 
+                            </ul>                             
+                        </li>                         
+                        <li class="dropdown">
+                            <a href="about.html"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul> 
+                                <li>
+                                    <a href="about.html#team">Team</a>
+                                </li>                                 
+                                <li>
+                                    <a href="about.html#terms_of_use">Terms of Use</a>
+                                </li>
+                            </ul>                             
+                        </li>                         
+                    </ul>                     
+                    <i class="bi bi-list mobile-nav-toggle"></i> 
+                </nav>
+                <!-- .navbar -->                 
+            </div>             
+        </header>
+        <!-- End Header -->         
+        <main id="main"> 
+            <!-- ======= Our Services Section ======= -->             
+            <!-- End Our Services Section -->             
+            <!-- ======= Services Section ======= -->             
+            <section class="features"> 
+                <div class="container">
+                    <div class="row aos-init aos-animate" data-aos="fade-up"> 
+                    </div>                     
+                    <span class="anchor" id="benchmark"></span>
+                    <h3><b>CODA Benchmark</b></h3>
+                    <p class="fst-italic"> 
+                    <b>*COMMON</b> evaluates 5 frequent road object categories in CODA including pedestrian, cyclist, car, truck, and tricycle.</br>
+                    <b>*NOVEL</b> evaluates the rest 29 categories in CODA in a class-agnostic manner.</br>
+                    <b>*CORNER</b> evaluates all 34 categories in CODA, including both COMMON and NOVEL, in a class-agnostic manner.</br>
+                    </p>
+    <!-- hline -->                
+    <table cellspacing="0" border="0" border-collapse: collapse;>
+    <colgroup width="193"></colgroup>
+    <colgroup span="17" width="80"></colgroup>
+    <tbody>
+    <tr>
+        <td width="60" rowspan=2 align="center" valign=middle bgcolor="#FDEADA"><font face="Arial Unicode MS" color="#000000">Method</font></td>
+        <td width="60" rowspan=2 align="center" valign=middle bgcolor="#DCE6F2"><font face="Arial Unicode MS" color="#000000">Dataset</font></td>
+        <td colspan=5 align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">CORNER</font></td>
+        <td colspan=5 align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">COMMON</font></td>
+        <td colspan=5 align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">NOVEL</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000"><b>mAR</b></font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">AR50</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">AR75</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">AR1</font></td>
+        <td align="center" valign=middle bgcolor="#F2DCDB"><font face="Arial Unicode MS" color="#000000">AR10</font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000"><b>mAR</b></font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">AR50</font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">AR75</font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">AR1</font></td>
+        <td align="center" valign=middle bgcolor="#EBF1DE"><font face="Arial Unicode MS" color="#000000">AR10</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000"><b>mAR</b></font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">AR50</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">AR75</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">AR1</font></td>
+        <td align="center" valign=middle bgcolor="#E6E0EC"><font face="Arial Unicode MS" color="#000000">AR10</font></td>
+        </tr>
+    
+    <!-- hline -->
+
+    <tr>
+        <td colspan=17 height="20" align="center" valign=middle bgcolor="#DBEEF4"><b><font face="Arial Unicode MS" color="#000000">CODA-ONCE</font></b></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RetinaNet</font></td>
+        <td rowspan=6 align="center" valign=middle><font face="Arial Unicode MS" color="#000000">SODA10M</font></td>
+        <td align="center" valign=middle sdval="9.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.6</font></td>
+        <td align="center" valign=middle sdval="21.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">21.8</font></td>
+        <td align="center" valign=middle sdval="7.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.0</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="3.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.0</font></td>
+        <td align="center" valign=middle sdval="29.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.8</font></td>
+        <td align="center" valign=middle sdval="59.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">59.8</font></td>
+        <td align="center" valign=middle sdval="24.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.5</font></td>
+        <td align="center" valign=middle sdval="4.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.7</font></td>
+        <td align="center" valign=middle sdval="24.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.8</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Faster R-CNN</font></td>
+         <td align="center" valign=middle sdval="4.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.0</font></td>
+        <td align="center" valign=middle sdval="8.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">8.5</font></td>
+        <td align="center" valign=middle sdval="3.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.4</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="2.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.3</font></td>
+        <td align="center" valign=middle sdval="23.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.3</font></td>
+        <td align="center" valign=middle sdval="44.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">44.3</font></td>
+        <td align="center" valign=middle sdval="19.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.6</font></td>
+        <td align="center" valign=middle sdval="3.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.7</font></td>
+        <td align="center" valign=middle sdval="22.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.5</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Cascade R-CNN</font></td>
+         <td align="center" valign=middle sdval="5.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.6</font></td>
+        <td align="center" valign=middle sdval="11.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.4</font></td>
+        <td align="center" valign=middle sdval="4.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.9</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="2.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.9</font></td>
+        <td align="center" valign=middle sdval="27.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.2</font></td>
+        <td align="center" valign=middle sdval="46.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.0</font></td>
+        <td align="center" valign=middle sdval="30.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.7</font></td>
+        <td align="center" valign=middle sdval="4.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.9</font></td>
+        <td align="center" valign=middle sdval="25.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.3</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Faster)</font></td>
+        <td align="center" valign=middle sdval="5.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.1</font></td>
+        <td align="center" valign=middle sdval="11.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.3</font></td>
+        <td align="center" valign=middle sdval="4.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.0</font></td>
+        <td align="center" valign=middle sdval="0.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.3</font></td>
+        <td align="center" valign=middle sdval="1.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.3</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Cascade)</font></td>
+        <td align="center" valign=middle sdval="4.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.8</font></td>
+        <td align="center" valign=middle sdval="11.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.4</font></td>
+        <td align="center" valign=middle sdval="3.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.5</font></td>
+        <td align="center" valign=middle sdval="0.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.3</font></td>
+        <td align="center" valign=middle sdval="1.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.3</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">ORE</font></td>
+        <td align="center" valign=middle sdval="5.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.3</font></td>
+        <td align="center" valign=middle sdval="11.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.5</font></td>
+        <td align="center" valign=middle sdval="4.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.4</font></td>
+        <td align="center" valign=middle sdval="0.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.3</font></td>
+        <td align="center" valign=middle sdval="2.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.8</font></td>
+        <td align="center" valign=middle sdval="19.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.2</font></td>
+        <td align="center" valign=middle sdval="36.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">36.8</font></td>
+        <td align="center" valign=middle sdval="17.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">17.1</font></td>
+        <td align="center" valign=middle sdval="5.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.4</font></td>
+        <td align="center" valign=middle sdval="18.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.6</font></td><td align="center" valign=middle sdval="2.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.0</font></td>
+        <td align="center" valign=middle sdval="4.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.8</font></td>
+        <td align="center" valign=middle sdval="1.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.6</font></td>
+        <td align="center" valign=middle sdval="0.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.4</font></td>
+        <td align="center" valign=middle sdval="1.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.7</font></td>
+    </tr>
+    <tr style="background:#000000;height:1px;width:100%">
+        <td colspan=17 height="1px;"></td>
+    </tr>
+    
+    <!-- hline -->
+    
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RetinaNet</font></td>
+        <td rowspan=5 align="center" valign=middle><font face="Arial Unicode MS" color="#000000">BDD100K</font></td>
+        <td align="center" valign=middle sdval="10.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.2</font></td>
+        <td align="center" valign=middle sdval="19.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.4</font></td>
+        <td align="center" valign=middle sdval="9.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.1</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="2.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.6</font></td>
+        <td align="center" valign=middle sdval="30.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.1</font></td>
+        <td align="center" valign=middle sdval="63.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">63.7</font></td>
+        <td align="center" valign=middle sdval="23.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.3</font></td>
+        <td align="center" valign=middle sdval="5.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.9</font></td>
+        <td align="center" valign=middle sdval="25.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.8</font></td>
+        <td align="center" valign=middle sdval="7.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.3</font></td>
+        <td align="center" valign=middle sdval="14.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.1</font></td>
+        <td align="center" valign=middle sdval="6.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.6</font></td>
+        <td align="center" valign=middle sdval="0.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.6</font></td>
+        <td align="center" valign=middle sdval="3.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.8</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Faster R-CNN</font></td>
+        <td align="center" valign=middle sdval="7.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.8</font></td>
+        <td align="center" valign=middle sdval="15.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.1</font></td>
+        <td align="center" valign=middle sdval="7.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.4</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="2.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.3</font></td>
+        <td align="center" valign=middle sdval="26.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">26.8</font></td>
+        <td align="center" valign=middle sdval="51.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">51.8</font></td>
+        <td align="center" valign=middle sdval="23.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.2</font></td>
+        <td align="center" valign=middle sdval="4.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.7</font></td>
+        <td align="center" valign=middle sdval="24.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.3</font></td>
+        <td align="center" valign=middle sdval="5.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.5</font></td>
+        <td align="center" valign=middle sdval="10.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.7</font></td>
+        <td align="center" valign=middle sdval="5.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.2</font></td>
+        <td align="center" valign=middle sdval="0.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.5</font></td>
+        <td align="center" valign=middle sdval="4.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.1</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Cascade R-CNN</font></td>
+        <td align="center" valign=middle sdval="7.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.7</font></td>
+        <td align="center" valign=middle sdval="14.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">14.6</font></td>
+        <td align="center" valign=middle sdval="6.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.9</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="2.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.4</font></td>
+        <td align="center" valign=middle sdval="26.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">26.7</font></td>
+        <td align="center" valign=middle sdval="48.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">48.8</font></td>
+        <td align="center" valign=middle sdval="24.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.0</font></td>
+        <td align="center" valign=middle sdval="5.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.4</font></td>
+        <td align="center" valign=middle sdval="24.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.6</font></td>
+        <td align="center" valign=middle sdval="5.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.7</font></td>
+        <td align="center" valign=middle sdval="10.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.5</font></td>
+        <td align="center" valign=middle sdval="5.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.1</font></td>
+        <td align="center" valign=middle sdval="0.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.6</font></td>
+        <td align="center" valign=middle sdval="4.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.3</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Faster)</font></td>
+        <td align="center" valign=middle sdval="7.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.9</font></td>
+        <td align="center" valign=middle sdval="16.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.1</font></td>
+        <td align="center" valign=middle sdval="7.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.0</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="1.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.6</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Cascade)</font></td>
+        <td align="center" valign=middle sdval="7.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.7</font></td>
+        <td align="center" valign=middle sdval="15.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.8</font></td>
+        <td align="center" valign=middle sdval="6.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.9</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="1.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.8</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr style="background:#000000;height:1px;width:100%">
+        <td colspan=17 height="1px;"></td>
+    </tr>
+    
+    <!-- hline -->
+
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Faster R-CNN</font></td>
+        <td rowspan=2 align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Waymo</font></td>
+        <td align="center" valign=middle sdval="4.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.5</font></td>
+        <td align="center" valign=middle sdval="9.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.5</font></td>
+        <td align="center" valign=middle sdval="3.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.6</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="2.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.7</font></td>
+        <td align="center" valign=middle sdval="17.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">17.5</font></td>
+        <td align="center" valign=middle sdval="32.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">32.9</font></td>
+        <td align="center" valign=middle sdval="15.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.1</font></td>
+        <td align="center" valign=middle sdval="2.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.8</font></td>
+        <td align="center" valign=middle sdval="17.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">17.0</font></td>
+        <td align="center" valign=middle sdval="2.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.5</font></td>
+        <td align="center" valign=middle sdval="5.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.3</font></td>
+        <td align="center" valign=middle sdval="2.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.0</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="1.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.9</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Faster)</font></td>
+        <td align="center" valign=middle sdval="5.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.0</font></td>
+        <td align="center" valign=middle sdval="10.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.8</font></td>
+        <td align="center" valign=middle sdval="4.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.3</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="1.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.7</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+
+    <!-- hline -->
+
+    <tr>
+        <td colspan=17 height="20" align="center" valign=middle bgcolor="#DBEEF4"><b><font face="Arial Unicode MS" color="#000000">CODA</font></b></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RetinaNet</font></td>
+        <td rowspan=6 align="center" valign=middle><font face="Arial Unicode MS" color="#000000">SODA10M</font></td>
+        <td align="center" valign=middle sdval="11.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.9</font></td>
+        <td align="center" valign=middle sdval="25.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.2</font></td>
+        <td align="center" valign=middle sdval="9.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.5</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="5.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.4</font></td>
+        <td align="center" valign=middle sdval="28.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">28.7</font></td>
+        <td align="center" valign=middle sdval="58.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.9</font></td>
+        <td align="center" valign=middle sdval="23.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.5</font></td>
+        <td align="center" valign=middle sdval="5.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.0</font></td>
+        <td align="center" valign=middle sdval="23.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.9</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Faster R-CNN</font></td>
+        <td align="center" valign=middle sdval="6.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.8</font></td>
+        <td align="center" valign=middle sdval="13.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.0</font></td>
+        <td align="center" valign=middle sdval="6.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.4</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="4.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.9</font></td>
+        <td align="center" valign=middle sdval="23.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.9</font></td>
+        <td align="center" valign=middle sdval="46.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">46.8</font></td>
+        <td align="center" valign=middle sdval="20.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.1</font></td>
+        <td align="center" valign=middle sdval="5.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.6</font></td>
+        <td align="center" valign=middle sdval="23.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.1</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Cascade R-CNN</font></td>
+        <td align="center" valign=middle sdval="8.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">8.3</font></td>
+        <td align="center" valign=middle sdval="15.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.5</font></td>
+        <td align="center" valign=middle sdval="7.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.6</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="5.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.5</font></td>
+        <td align="center" valign=middle sdval="27.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.2</font></td>
+        <td align="center" valign=middle sdval="47.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">47.0</font></td>
+        <td align="center" valign=middle sdval="29.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">29.4</font></td>
+        <td align="center" valign=middle sdval="6.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.2</font></td>
+        <td align="center" valign=middle sdval="25.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.3</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Faster)</font></td>
+        <td align="center" valign=middle sdval="8.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">8.1</font></td>
+        <td align="center" valign=middle sdval="16.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.2</font></td>
+        <td align="center" valign=middle sdval="7.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.4</font></td>
+        <td align="center" valign=middle sdval="0.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.6</font></td>
+        <td align="center" valign=middle sdval="3.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.1</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Cascade)</font></td>
+        <td align="center" valign=middle sdval="7.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.7</font></td>
+        <td align="center" valign=middle sdval="16.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.0</font></td>
+        <td align="center" valign=middle sdval="6.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.8</font></td>
+        <td align="center" valign=middle sdval="0.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.5</font></td>
+        <td align="center" valign=middle sdval="2.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.8</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">ORE</font></td>
+        <td align="center" valign=middle sdval="8.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">8.3</font></td>
+        <td align="center" valign=middle sdval="16.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.4</font></td>
+        <td align="center" valign=middle sdval="7.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.4</font></td>
+        <td align="center" valign=middle sdval="0.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.3</font></td>
+        <td align="center" valign=middle sdval="5.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.6</font></td>
+        <td align="center" valign=middle sdval="18.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.5</font></td>
+        <td align="center" valign=middle sdval="35.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">35.5</font></td>
+        <td align="center" valign=middle sdval="18.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.2</font></td>
+        <td align="center" valign=middle sdval="5.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.5</font></td>
+        <td align="center" valign=middle sdval="18.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.1</font></td>
+        <td align="center" valign=middle sdval="3.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.4</font></td>
+        <td align="center" valign=middle sdval="7.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.6</font></td>
+        <td align="center" valign=middle sdval="2.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.8</font></td>
+        <td align="center" valign=middle sdval="0.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.8</font></td>
+        <td align="center" valign=middle sdval="2.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.9</font></td>
+    </tr>
+    <tr style="background:#000000;height:1px;width:100%">
+        <td colspan=17 height="1px;"></td>
+    </tr>
+    
+    <!-- hline -->
+    
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RetinaNet</font></td>
+        <td rowspan=5 align="center" valign=middle><font face="Arial Unicode MS" color="#000000">BDD100K</font></td>
+        <td align="center" valign=middle sdval="12.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">12.8</font></td>
+        <td align="center" valign=middle sdval="23.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.2</font></td>
+        <td align="center" valign=middle sdval="11.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.9</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="4.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.8</font></td>
+        <td align="center" valign=middle sdval="27.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">27.5</font></td>
+        <td align="center" valign=middle sdval="58.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">58.1</font></td>
+        <td align="center" valign=middle sdval="21.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">21.5</font></td>
+        <td align="center" valign=middle sdval="5.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.4</font></td>
+        <td align="center" valign=middle sdval="23.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.6</font></td>
+        <td align="center" valign=middle sdval="9.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.7</font></td>
+        <td align="center" valign=middle sdval="17.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">17.7</font></td>
+        <td align="center" valign=middle sdval="9.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.1</font></td>
+        <td align="center" valign=middle sdval="1.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.2</font></td>
+        <td align="center" valign=middle sdval="5.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.9</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Faster R-CNN</font></td>
+        <td align="center" valign=middle sdval="10.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.7</font></td>
+        <td align="center" valign=middle sdval="19.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">19.2</font></td>
+        <td align="center" valign=middle sdval="10.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.2</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="4.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.3</font></td>
+        <td align="center" valign=middle sdval="24.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">24.4</font></td>
+        <td align="center" valign=middle sdval="48.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">48.1</font></td>
+        <td align="center" valign=middle sdval="20.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.9</font></td>
+        <td align="center" valign=middle sdval="4.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.3</font></td>
+        <td align="center" valign=middle sdval="22.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">22.0</font></td>
+        <td align="center" valign=middle sdval="7.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">7.2</font></td>
+        <td align="center" valign=middle sdval="13.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.3</font></td>
+        <td align="center" valign=middle sdval="6.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.8</font></td>
+        <td align="center" valign=middle sdval="0.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.9</font></td>
+        <td align="center" valign=middle sdval="5.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.9</font></td>
+    </tr>
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Cascade R-CNN</font></td>
+        <td align="center" valign=middle sdval="10.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.4</font></td>
+        <td align="center" valign=middle sdval="18.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">18.5</font></td>
+        <td align="center" valign=middle sdval="9.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">9.7</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="4.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.5</font></td>
+        <td align="center" valign=middle sdval="25.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">25.7</font></td>
+        <td align="center" valign=middle sdval="48.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">48.4</font></td>
+        <td align="center" valign=middle sdval="23.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.3</font></td>
+        <td align="center" valign=middle sdval="5.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.8</font></td>
+        <td align="center" valign=middle sdval="23.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">23.6</font></td>
+        <td align="center" valign=middle sdval="6.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.9</font></td>
+        <td align="center" valign=middle sdval="12.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">12.5</font></td>
+        <td align="center" valign=middle sdval="6.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.5</font></td>
+        <td align="center" valign=middle sdval="1.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">1.1</font></td>
+        <td align="center" valign=middle sdval="5.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.7</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Faster)</font></td>
+        <td align="center" valign=middle sdval="10.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.6</font></td>
+        <td align="center" valign=middle sdval="20.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.0</font></td>
+        <td align="center" valign=middle sdval="10.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.2</font></td>
+        <td align="center" valign=middle sdval="0.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.5</font></td>
+        <td align="center" valign=middle sdval="3.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.7</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Cascade)</font></td>
+        <td align="center" valign=middle sdval="10.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.6</font></td>
+        <td align="center" valign=middle sdval="20.0" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">20.0</font></td>
+        <td align="center" valign=middle sdval="10.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">10.2</font></td>
+        <td align="center" valign=middle sdval="0.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.4</font></td>
+        <td align="center" valign=middle sdval="3.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.9</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+    <tr style="background:#000000;height:1px;width:100%">
+        <td colspan=17 height="1px;"></td>
+    </tr>
+    
+    <!-- hline -->
+
+    <tr>
+        <td align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Faster R-CNN</font></td>
+        <td rowspan=2 align="center" valign=middle><font face="Arial Unicode MS" color="#000000">Waymo</font></td>
+        <td align="center" valign=middle sdval="6.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.1</font></td>
+        <td align="center" valign=middle sdval="11.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">11.9</font></td>
+        <td align="center" valign=middle sdval="5.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">5.4</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="4.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.4</font></td>
+        <td align="center" valign=middle sdval="16.3" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">16.3</font></td>
+        <td align="center" valign=middle sdval="30.5" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">30.5</font></td>
+        <td align="center" valign=middle sdval="13.9" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.9</font></td>
+        <td align="center" valign=middle sdval="2.8" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.8</font></td>
+        <td align="center" valign=middle sdval="15.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">15.7</font></td>
+        <td align="center" valign=middle sdval="4.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.4</font></td>
+        <td align="center" valign=middle sdval="8.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">8.6</font></td>
+        <td align="center" valign=middle sdval="4.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">4.1</font></td>
+        <td align="center" valign=middle sdval="0.1" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.1</font></td>
+        <td align="center" valign=middle sdval="3.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">3.7</font></td>
+    </tr>
+    <tr>
+        <td width="50" align="center" valign=middle><font face="Arial Unicode MS" color="#000000">RPN (Faster)</font></td>
+        <td align="center" valign=middle sdval="6.7" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.7</font></td>
+        <td align="center" valign=middle sdval="13.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">13.4</font></td>
+        <td align="center" valign=middle sdval="6.4" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">6.4</font></td>
+        <td align="center" valign=middle sdval="0.2" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">0.2</font></td>
+        <td align="center" valign=middle sdval="2.6" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">2.6</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td><td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+        <td align="center" valign=middle sdval="-" sdnum="1033;0;0.00"><font face="Arial Unicode MS" color="#000000">-</font></td>
+    </tr>
+
+
+    
+</table>
+                    <div class="col-md-7 order-2 order-md-1 pt-5"></div>
+                    <div class="row aos-init aos-animate" data-aos="fade-up"> 
+                    </div>
+                </div>                 
+            </section>
+            <!-- End Services Section -->             
+            <!-- ======= Why Us Section ======= -->             
+            <!-- End Why Us Section -->             
+            <!-- ======= Service Details Section ======= -->             
+            <!-- End Service Details Section -->             
+            <!-- ======= Pricing Section ======= -->             
+            <!-- End Pricing Section -->             
+        </main>
+        <!-- End #main -->         
+        <!-- ======= Footer ======= -->         
+        <footer id="footer" data-aos-easing="ease-in-out" data-aos-duration="500"> 
+            <div class="container"> 
+                <div class="copyright"> 
+                    &copy; Copyright 
+                    <strong><span>CODA TEAM</span></strong>. All Rights Reserved
+                </div>                 
+                <div class="credits"> 
+                    <!-- All the links in the footer should remain intact. -->                     
+                    <!-- You can delete the links only if you purchased the pro version. -->                     
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->                     
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->                     
+                    Designed by 
+                    <a href="https://bootstrapmade.com/">BootstrapMade</a> 
+                </div>                 
+            </div>             
+        </footer>
+        <!-- End Footer -->         
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> 
+        <!-- Vendor JS Files -->         
+        <script src="assets/vendor/aos/aos.js"></script>         
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>         
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>         
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>         
+        <script src="assets/vendor/php-email-form/validate.js"></script>         
+        <script src="assets/vendor/purecounter/purecounter.js"></script>         
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>         
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>         
+        <!-- Template Main JS File -->         
+        <script src="assets/js/main.js"></script>         
+    </body>     
+</html>
