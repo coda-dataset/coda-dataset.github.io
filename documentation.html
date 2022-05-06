@@ -46,6 +46,9 @@
                             <a class="active" href="documentation.html"><span>Documentation</span> <i class="bi bi-chevron-down"></i></a>
                             <ul> 
                                 <li>
+                                    <a href="documentation.html#data_usage">Data Usage</a>
+                                </li>                                 
+                                <li>
                                     <a href="documentation.html#data_format">Data Format</a>
                                 </li>                                 
                                 <li>
@@ -96,6 +99,22 @@
             <!-- ======= Services Section ======= -->             
             <section class="features"> 
                 <div class="container">
+                    <span class="anchor" id="data_usage"></span>
+                    <h3><b>Data Usage</b></h3>
+                    <p>CODA is the world's first real-world self-driving corner case dataset of 1500 scenes (frames) containing nearly 6K corner cases. 
+                    CODA is split into a validation set of 1000 images and a test set of 500 images.
+                    The validation set contains 4008 objects of 27 object categories, whereas the test set contains 1929 objects of 34 object categories, including 7 categories absent in the test set. </p>
+
+                    <h4><b>Validation set</b></h4>
+                    Corner case annotations are stored in <b>"val/corner_case.json"</b> in COCO-compatible format.
+                    Out of the 1000 scenes of the validation set, 717 are taken from ONCE, 89 are taken from nuScenes, and 194 are taken from KITTI.
+                    Due to license issues, for nuScenes and KITTI, only corner case annotations and the correponding sample indices/tokens of original datasets are provided (<b>"val/kitti_indices.json"</b> and <b>"val/nuscenes_sample_tokens.json"</b>).
+                    For ONCE, in addition to corner case annotations, we also provide the front-view images captured by the camera named <b>"cam03"</b>.
+                    The images taken from ONCE are named in the format of <b>"[sequence_id]_[frame_id].jpg"</b> (000001_1616005007200.jpg, for example).
+                    The two identifiers (<b>"sequence_id"</b> and <b>"frame_id"</b>) can be used to extract other data (e.g., lidar point clouds) from the ONCE dataset if needed.
+                    
+                    <div class="col-md-7 order-2 order-md-1 pt-5"> </div>
+
                     <span class="anchor" id="data_format"></span>
                     <h3><b>Data Format</b></h3>
                     <p> The annotation file keeps consistent with the <b>COCO format</b> and contains three keys: "images", "categories" and "annotations".

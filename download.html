@@ -46,6 +46,9 @@
                             <a href="documentation.html"><span>Documentation</span> <i class="bi bi-chevron-down"></i></a>
                             <ul> 
                                 <li>
+                                    <a href="documentation.html#data_usage">Data Usage</a>
+                                </li>                                 
+                                <li>
                                     <a href="documentation.html#data_format">Data Format</a>
                                 </li>                                 
                                 <li>
@@ -101,16 +104,23 @@
                     <h3><b>Instructions</b></h3>
                     <p>The instructions for downloading CODA is listed as follows:</p>
                     <ol>
-                      <li>Download the CODA dataset file using the link provided below and then decompress.</li>
-                      <li>After decompression, the data organization is listed as follows:</li>
+                      <li>Download the CODA dataset files using the link provided below and then decompress.</li>
+                      <li>Check the <a href="./documentation.html">CODA Documentation</a> page and the included README file for specific usages of CODA dataset, especially for point cloud and related data of KITTI and nuScenes datasets. </li>
                     </ol>
+                    <p> After decompression, the data organization is listed as follows: </p>
                     <pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">
 <code><b>"CODA":</b> {
-    |---corner.json                 -- COCO-style annotation
-    |---image                       -- Image directory
-        |---*_*.jpg                 -- ONCE images
-        |---kitti_*.png             -- KITTI images
-        |---nuscenes_*.jpg          -- nuScenes images
+    |---val                             
+        |---corner_case.json            -- COCO-style annotation
+        |---kitti_indices.json          -- KITTI sample indices
+        |---nuscenes_sample_tokens.json -- nuScenes sample tokens
+        |---images                      -- ONCE images
+            |---*_*.jpg                 
+    |---sample                          -- Proper subset of validation set 
+        |---corner_case.json            
+        |---images        
+            |---*_*.jpg     
+    |---README.md                       -- Detailed instructions about CODA usage
 }
 </code></pre>
                     <div class="row aos-init aos-animate" data-aos="fade-up">
@@ -121,11 +131,11 @@
                     <span class="anchor" id="link"></span>
                     <h3><b>Download Links</b></h3>
                     <p class="fst-italic"> 
-                        Currently we have released CODA sample set with the corresponding COCO-style annotation file. </br>
-                        The full CODA dataset with well-aligned point cloud data is coming soon! </br>
+                        Currently we have released CODA validation set and CODA sample set, and the extraction code for Baidu Yunpan is fwu2. </br>
                     </p>
                     <p> 
                         Download link for CODA sample set (~100 images):  [<a href="assets/file/coda_sample.zip" target="_blank">Link</a>]</br>
+                        Download link for CODA validation set:  [<a href="./index.html" target="_blank">Goole Drive</a>] [<a href="./index.html" target="_blank">Baidu Yunpan</a>]</br>
                     </p>
 
                     <div class="row aos-init aos-animate" data-aos="fade-up">
