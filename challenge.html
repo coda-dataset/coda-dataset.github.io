@@ -3,7 +3,7 @@
     <head> 
         <meta charset="utf-8"> 
         <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
-        <title>CODA-Download</title>         
+        <title>CODA-Challenge</title>         
         <meta content="" name="description"> 
         <meta content="" name="keywords"> 
         <!-- Favicons -->         
@@ -85,7 +85,7 @@
                                     <a href="about.html#terms_of_use">Terms of Use</a>
                                 </li>
                             </ul>                             
-                        </li>           
+                        </li>          
                         <li class="dropdown">
                             <a href="challenge.html"><span>Challenge</span> <i class="bi bi-chevron-down"></i></a>
                             <ul> 
@@ -93,7 +93,7 @@
                                     <a href="challenge.html#challenge">Challenge</a>
                                 </li>                                 
                             </ul>                             
-                        </li>                           
+                        </li>                            
                     </ul>                     
                     <i class="bi bi-list mobile-nav-toggle"></i> 
                 </nav>
@@ -107,56 +107,44 @@
             <!-- ======= Services Section ======= -->             
             <section class="features"> 
                 <div class="container">
-                    <div class="row aos-init aos-animate" data-aos="fade-up"></div>              
-                    <span class="anchor" id="instructions"></span>
-                    <h3><b>Instructions</b></h3>
-                    <p>The instructions for downloading CODA is listed as follows:</p>
-                    <ol>
-                      <li>Download the CODA dataset files using the link provided below and then decompress.</li>
-                      <li>Check the <a href="./documentation.html">CODA Documentation</a> page and the included README file for specific usages of CODA dataset, especially for the related data of KITTI and nuScenes datasets. </li>
-                    </ol>
-                    <p> After decompression, the data organization is listed as follows: </p>
-                    <pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">
-<code><b>"CODA":</b> {
-    |---base                             
-        |---corner_case.json            -- COCO-style annotation
-        |---kitti_indices.json          -- KITTI sample indices
-        |---nuscenes_sample_tokens.json -- nuScenes sample tokens
-    |---sample                          -- Proper subset of validation set 
-        |---corner_case.json            
-        |---images        
-            |---*_*.jpg     
-    |---val                             -- CODA2022 validation set 
-        |---annotations.json            
-        |---images        
-            |---*_*.jpg     
-    |---test                            -- CODA2022 test set 
-        |---annotations.json            
-        |---images        
-            |---*_*.jpg     
-    |---README.md                       -- Detailed instructions about CODA usage
-}
-</code></pre>
-                    <div class="row aos-init aos-animate" data-aos="fade-up">
-                        <div class="col-md-7 order-2 order-md-1 pt-5"> 
-                        </div>                         
-                    </div>
-                    
-                    <span class="anchor" id="link"></span>
-                    <h3><b>Download Links</b></h3>
-                    <p class="fst-italic"> 
-                        The ground truth annotation of CODA2022 test set will be released after the SSLAD challenge, and extraction code for Baidu Yunpan is fwu2. </br>
-                    </p>
-                    <p> 
-                        Download link for CODA sample set (~100 images):  [<a href="assets/file/coda_sample.zip" target="_blank">Link</a>]</br>
-                        Download link for CODA base set:  [<a href="https://drive.google.com/file/d/1p9vCPrkjknbLzgna-ppfCS6L87lCrd9d/view?usp=sharing" target="_blank">Goole Drive</a>] [<a href="https://pan.baidu.com/s/1vHQ5znTLzYmGYRn8dBUzRw" target="_blank">Baidu Yunpan</a>]</br>
-                        Download link for CODA2022 val set (images with annotations):  [<a href="https://drive.google.com/file/d/1s7T20mwAuIGKIbGcKRoy2MIkI4VfBdyQ/view?usp=sharing" target="_blank">Goole Drive</a>]</br>
-                        Download link for CODA2022 test set (images w/o annotations):  [<a href="https://drive.google.com/file/d/1PJIDhoQHa1OLqJG1-VigPGGQ65n95ttt/view?usp=sharing" target="_blank">Goole Drive</a>]</br>
+                    <div class="row aos-init aos-animate" data-aos="fade-up"> 
+                    </div>                     
+                    <span class="anchor" id="challenge"></span>
+                    <h3><b>Challenge From Huawei</b></h3>
+                    <p> We are looking for talents to solve the challenge of corner cases together! For professors in universities, we may have collaboration projects funded by Huawei to work on this problem. For students who are interested in this topic, welcome to join us as interns or employees. 
                     </p>
 
-                    <div class="row aos-init aos-animate" data-aos="fade-up">
-                        <div class="col-md-7 order-2 order-md-1 pt-5"> 
-                    </div>                         
+                    <h4><b>Background</b></h4>
+                    <p><li> In recent years, autonomous driving technologies have developed rapidly due to their great potential in improving efficiency and reducing accidents. As an important module of the perception system in autonomous driving, object detection in road scenes plays an important role.
+                    </li>
+                    <li> Although the current autonomous driving model achieves relatively accurate results in detecting common targets, such as pedestrians and vehicles, it is still difficult to detect corner cases, such as dogs on highways, baby strollers on roads, and overturned trucks, leading to potential safety risks.
+                    </li>
+                    </p>
+
+                    <h4><b>Technical Challenges</b></h4>
+                    <p><li> There are various rare classes and scenarios in autonomous driving. However, there is no standard definition of what corner cases are. A corner case can be an outlier of the data, or a failure case of a specific model. It is challenging to figure out when a corner case will occur, and whether it is caused by the data or the model training process. In this case, providing solutions to corner cases are difficult. 
+                    </li>
+                    <li> The perception system in autonomous driving are complex, which usually involves multiple cameras, Lidar, and even Radar. How to make good use of the multimodal information to deal with the problem of corner cases is challenging.
+                    </li>
+                    </p>
+
+                    <h4><b>Research Topics and Benchmarks</b></h4>
+                    <p><li> Understand and define corner cases in autonomous driving, analyze whether a corner case is caused by the data or the model training process, and locate the weaknesses of models;
+                    </li>
+                    <li> Consider inputs such as images and videos from multiple cameras, point cloud, etc., and develop a general open-world object detection system with generalization ability, which can deal with various rare categories and scenarios;
+                    </li>
+                    <li> Explore solutions for efficient locating and mining of corner cases from massive unlabeled autonomous driving road mining data.
+                    </li>
+                    </p>
+
+                    <p>We offer CODA, a real-world road corner case dataset for object detection in autonomous driving, for model evaluation. Please contact Dr. Lanqing Hong (<a href = "mailto: honglanqing@huawei.com">honglanqing@huawei.com</a>) for more details. 
+                    </p>
+                    <p style="text-align: center;">
+                    <img src="assets/img/challenge.png" style="width: 50%">
+                    </p>
+                    <div class="col-md-7 order-2 order-md-1 pt-5"> 
+                    </div>
+                </div>                 
             </section>
             <!-- End Services Section -->             
             <!-- ======= Why Us Section ======= -->             
