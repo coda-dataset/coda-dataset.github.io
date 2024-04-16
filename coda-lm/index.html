@@ -1,6 +1,488 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  Coming soon!
+  <meta charset="utf-8">
+  <meta name="description" content="Automated Evaluation of Large Vision-Language Models on Self-driving Corner Cases">
+  <meta name="keywords" content="LVLM Evaluation, Autonomous Driving, Corner Case">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CODA-LM: Automated Evaluation of Large Vision-Language Models on Self-driving Corner Cases</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <!-- Vendor Stylesheets -->
+  <!--=================js==========================-->
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/juxtapose.css">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+  <style>
+
+    /* Flexbox布局 */
+    .img-display-container {
+      display: flex;
+      justify-content: center;
+      /* 在各项之间平均分布空间 */
+      flex-wrap: wrap;
+      /* 允许项在必要时换行 */
+    }
+
+    .video-caption {
+      text-align: center;
+      /* 文本居中 */
+      width: 100%;
+      /* 视频和文本宽度占满其容器 */
+      margin-bottom: 5px;
+    }
+
+    .img-block {
+      flex-basis: 25%;
+      margin: 0 1%;
+      /* 为了保持视觉间隔，添加左右外边距 */
+    }
+
+
+  </style>
 </head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://kaichen1998.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Corner Case for Autonomous Driving (CODA) Series
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://coda-dataset.github.io/">
+            CODA (2D Detection)
+          </a>
+          <a class="navbar-item" href="https://coda-dataset.github.io/coda-lm/">
+            CODA-LM (Multi-modality)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <img src="./static/images/logo.png" alt="Icon" style="vertical-align: middle;" width="60px" />
+              CODA-LM: Automated Evaluation of Large Vision-Language Models on Self-driving Corner Cases
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="">Yanze Li</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="">Wenhua Zhang</a><sup>1*</sup>,</span>
+              <span class="author-block">
+                <a href="https://kaichen1998.github.io">Kai Chen</a><sup>2*</sup>,</span>
+              <span class="author-block">
+                <a href="">Yanxin Liu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">Pengxiang Li</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://gaoruiyuan.com/">Ruiyuan Gao</a><sup>3</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.sg/citations?user=2p7x6OUAAAAJ&hl=en">
+                  Lanqing Hong</a><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="">Meng Tian</a><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="">Xinhai Zhao</a><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=XboZC1AAAAAJ&hl=en&oi=ao">Zhenguo Li</a><sup>4</sup>,</span>
+              <span class="author-block">
+                <a href="https://sites.google.com/view/dyyeung">Dit-Yan Yeung</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=D3nE0agAAAAJ&hl=en">Huchuan
+                  Lu</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://stephenjia.github.io/">Xu Jia</a><sup>1<span>&#8224;</span></sup>,</span>
+                
+            </div>
+              <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Dalian University of Technology</span>
+              <span class="author-block"><sup>2</sup>Hong Kong University of Science and Technology</span>
+              <span class="author-block"><sup>3</sup>The Chinese University of Hong Kong</span>
+              <span class="author-block"><sup>4</sup>Huawei Noah’s Ark Lab</span>
+            </div>
+            <div class="publication-footnotes">
+              <span class="author-block">(
+                <sup>*</sup>Equal contribution.
+                <sup><span>&#8224;</span></sup>Corresponding authors.
+                )</span>
+            </div>
+
+
+            <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Arxiv Link. -->
+              <span class="link-block">
+                <a href="./index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="./index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img id="evaluation" src="./static/images/evaluation.png" alt="Method Overview"
+          style="width: 90%; display: block; margin: auto;">
+
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">Different LVLMs' performance regarding the three tasks and seven road categories on CODA-LM Benchmark.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small" style="background-color: #d2cece20;">
+    <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2" style="margin-top: 20px; margin-bottom: 10px;">CODA-LLM Driving Scenarios</h2>
+          </div>
+      </div>
+    <div class="img-display-container">
+        <div class="img-block">
+          <img src="./static/images/0035.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/0041.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/0240.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/3572.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/3673.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/4010.jpg" alt=image" >
+        </div>
+      </div>
+  </section>
+
+<!--        <img src="./static/images/0035.jpg" alt="image" class="scenarios"/>-->
+<!--        <img src="./static/images/0041.jpg" alt="image" class="scenarios"/>-->
+<!--        <img src="./static/images/0240.jpg" alt="image" class="scenarios"/>-->
+
+<!--        <img src="./static/images/3572.jpg" alt="image" class="scenarios"/>-->
+<!--        <img src="./static/images/3673.jpg" alt="image" class="scenarios"/>-->
+<!--        <img src="./static/images/4010.jpg" alt="image" class="scenarios"/>-->
+
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>Large Vision-Language Models (LVLMs), due to the remarkable visual reasoning ability to understand 
+              images and videos, have received widespread attention in the autonomous driving domain, which significantly 
+              advances the development of interpretable end-to-end autonomous driving. However, current evaluations 
+              of LVLMs primarily focus on the multi-faceted capabilities in common scenarios, lacking quantifiable
+              and automated assessment in autonomous driving contexts, let alone severe road corner cases that even 
+              the state-of-the-art autonomous driving perception systems struggle to handle. 
+            </p>
+            <p>
+              In this paper, we propose <strong>CODA-LM</strong>, a novel vision-language benchmark for self-driving, 
+              which provides the first automatic and quantitative evaluation of LVLMs for interpretable autonomous 
+              driving including general perception, regional perception, and driving suggestions. CODA-LM utilizes 
+              structured texts to describe the road images, exploiting powerful text-only large language models (LLMs) 
+              without image inputs to assess the capabilities of LVLMs in autonomous driving scenarios, which reveals 
+              stronger alignment with human preferences than LVLM judges. Experiments demonstrate that even the closed-sourced 
+              commercial LVLMs like GPT-4V cannot deal with road corner cases well, suggesting that we are still far 
+              from a strong LVLM-powered intelligent driving agent, and we hope our CODA-LM can become the catalyst to 
+              promote future development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2" style="margin-top: 20px; margin-bottom: 10px;">CODA-LLM Data</h2>
+          </div>
+      </div>
+    <div class="img-display-container">
+        <div class="img-block">
+          <img src="./static/images/data1.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/data2.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/data3.jpg" alt=image" >
+        </div>
+
+      </div>
+  </section>
+
+  <section class="hero is-light is-small" style="background-color: #d2cece20;">
+    <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2" style="margin-top: 20px; margin-bottom: 10px;">Different VLM On CODA-LLM General Perception Task</h2>
+          </div>
+      </div>
+    <div class="img-display-container">
+        <div class="img-block">
+          <img src="./static/images/general1.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/general2.jpg" alt=image" >
+        </div>
+
+      </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2" style="margin-top: 20px; margin-bottom: 10px;">Different VLM On CODA-LLM Regional Perception Task</h2>
+          </div>
+      </div>
+    <div class="img-display-container">
+        <div class="img-block">
+          <img src="./static/images/regional1.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/regional2.jpg" alt=image" >
+        </div>
+
+      </div>
+  </section>
+
+  <section class="hero is-light is-small" style="background-color: #d2cece20;">
+    <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2" style="margin-top: 20px; margin-bottom: 10px;">Different VLM On CODA-LLM Driving Suggestion Task</h2>
+          </div>
+      </div>
+    <div class="img-display-container">
+        <div class="img-block">
+          <img src="./static/images/suggestions.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/suggestions2.jpg" alt=image" >
+        </div>
+
+      </div>
+  </section>
+
+  <section class="hero is-light is-small">
+    <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-2" style="margin-top: 20px; margin-bottom: 10px;">Evaluation Table</h2>
+          </div>
+      </div>
+    <div class="img-display-container">
+        <div class="img-block">
+          <img src="./static/images/evaluation_table.jpg" alt=image" >
+        </div>
+
+        <div class="img-block">
+          <img src="./static/images/evaluation_table2.jpg" alt=image" >
+        </div>
+
+      </div>
+  </section>
+
+  <footer class="footer" style="background-color: #d2cece20;">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Slider Javascripts -->
+  <!--=================Functions==========================-->
+  <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js" async></script>
+  <script src="./static/js/juxtapose.js"></script>
+
+  <!-- <script>
+    var slider;
+    let origImages = [
+      { "src": "https://chenyangsi.top/FreeU/freeu_img_vid/t2i/1_sd.png", "label": "SD", },
+      { "src": "https://chenyangsi.top/FreeU/freeu_img_vid/t2i/1_freeu.png", "label": "SD+FreeU", }
+    ];
+    let origOptions = {
+      "makeResponsive": true,
+      "showLabels": true,
+      "mode": "horizontal",
+      "showCredits": true,
+      "animate": true,
+      "startingPosition": "50"
+    };
+
+    const juxtaposeSelector = "#juxtapose-embed";
+    const transientSelector = "#juxtapose-hidden";
+
+
+    function tab_gallery_click(name) {
+      // Get the expanded image
+      let inputImage = {
+        label: "SD",
+      };
+      let outputImage = {
+        label: "SD+FreeU",
+      };
+
+      inputImage.src = "freeu_img_vid/t2i/".concat(name, "_sd", ".png")
+      outputImage.src = "freeu_img_vid/t2i/".concat(name, "_freeu", ".png")
+
+      let images = [inputImage, outputImage];
+      let options = slider.options;
+      options.callback = function (obj) {
+        var newNode = document.getElementById(obj.selector.substring(1));
+        var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+        console.log(obj.selector.substring(1));
+        console.log(newNode.children[0]);
+        oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+        //newNode.removeChild(newNode.children[0]);
+
+      };
+
+      slider = new juxtapose.JXSlider(transientSelector, images, options);
+    };
+
+    (function () {
+      slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+      //document.getElementById("left-button").onclick = replaceLeft;
+      //document.getElementById("right-button").onclick = replaceRight;
+    })();
+    // Get the image text
+    var imgText = document.getElementById("imgtext");
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    // expandImg.src = imgs.src;
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    imgText.innerHTML = name;
+    // Show the container element (hidden with CSS)
+    // expandImg.parentElement.style.display = "block";
+
+    $(".flip-card").click(function () {
+      console.log("fading in")
+      div_back = $(this).children().children()[1]
+      div_front = $(this).children().children()[0]
+      // console.log($(this).children("div.flip-card-back"))
+      console.log(div_back)
+      $(div_front).addClass("out");
+      $(div_front).removeClass("in");
+
+      $(div_back).addClass("in");
+      $(div_back).removeClass("out");
+
+    });
+
+    $(".flip-card").mouseleave(function () {
+      console.log("fading in")
+      div_back = $(this).children().children()[1]
+      div_front = $(this).children().children()[0]
+      // console.log($(this).children("div.flip-card-back"))
+      console.log(div_back)
+      $(div_front).addClass("in");
+      $(div_front).removeClass("out");
+
+      $(div_back).addClass("out");
+      $(div_back).removeClass("in");
+
+    });
+  </script> -->
+
+
+</body>
+
 </html>
