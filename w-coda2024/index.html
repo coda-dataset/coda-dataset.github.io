@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="keywords" content="eccv, workshop, computer vision, natural language processing, computer graphics, visual learning, machine learning">
+
+    <link rel="shortcut icon" href="static/img/site/favicon.svg">
+
+    <title>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving @ECCV24</title>
+    <meta name="description" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving, ECCV 2024 Workshop">
+
+    <!--Open Graph Related Stuff-->
+    <meta property="og:title" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:description" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving"/>
+    <meta property="og:site_name" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving"/>
+    <meta property="og:image" content=""/>
+
+    <!--Twitter Card Stuff-->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Multimodal Perception and Comprehension for Autonomous Driving"/>
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content=""/>
+    <meta name="twitter:description" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving, ECCV 2024 Workshop"/>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="static/css/main.css" media="screen,projection">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <style>
+
+      .people-pic {
+        max-width: 125px;
+        max-height: 125px;
+        /*width:300px;*/
+        /*height:300px;*/
+        object-fit: cover;
+        border-radius: 0%;
+      }
+    </style>
+  </head>
+
+  <body>
+
+  <!-- <div class="top-strip"></div> -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/"></a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#cfp">Call for Papers</a></li>
+        <li><a href="#dates">Schedule</a></li>
+        <!-- <li><a href="#speakers">Invited Speake 	rs</a></li> -->
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Past Workshops <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="https://sslad2022.github.io/" target="__blank">ECCV 2022</a></li>
+            <li><a href="https://sslad2021.github.io/" target="__blank">ICCV 2021</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="container">
+    <div class="page-content">
+      <p><br /></p>
+      <div class="row">
+        <div class="col-xs-12">
+          <center><h1>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving</h1></center>
+          <center><h2>ECCV 2024 Workshop @ Milano, Italy</h2></center>
+        </div>
+      </div>
+      <hr />
+
+	  <!-- <div class="alert alert-info" role="alert">
+	    <b>Join live stream <a href="https://live.allintheloop.net/Agenda/ortra/ortraECCV2022/View_agenda/236651">here</a> (ECCV registration required).</b>
+	  </div> -->
+
+	  <!-- <div class="row" id="teaser">  
+        <div>  
+        <img src="static/img/site/teaser.jpg" style="width: 100%; height: auto;"/>
+        </div>
+      </div> -->
+
+      <!-- Visualization -->
+	  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+	    <div class="center" style="text-align:center">
+	      <img src="static/img/site/magicdrive-teaser.png">
+	      <p style="text-align:center">Street view images generated with <a href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br/><br/></p>
+
+	      <video id="replay-video" muted preload playsinline autoplay loop width="95%">
+	        <source src="static/img/site/magicdrive-vid.mp4" type="video/mp4" />
+	      </video>
+	      <p style="text-align:center">Street view videos generated with <a href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br /><br /></p>
+	    </div>
+	  </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="center" style="text-align:center">
+          <img src="static/img/site/codalm-teaser.jpg" width="90%">
+          <p style="text-align:center">Visual comprehension data samples from <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>.<br /><br /></p>
+        </div>
+      </div>
+
+	  
+      <!-- Introduction -->
+	  <div class="row" id="intro">
+        <div class="col-xs-12">
+          <h2>Introduction</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            This workshop aims to bridge the gap among state-of-the-art autonomous driving techniques and the vision for fully intelligent, reliable self-driving agents, underscoring critical importance of robust visual perception, adept decision-making, and precise planning controls, particularly when confronted with <b>corner cases</b>, rare but critical situations that challenge the limits of reliable automated systems.
+            The advent of Multimodal Large Language Models (MLLMs), represented by GPT-4V, has brought another paradigm shift, showcasing the unprecedented capabilities in <b>multimodal perception and comprehension</b> even under dynamic street scenes.
+			      However, leveraging MLLMs to tackle nuanced challenges of self-driving, especially for precise perception, motion prediction, and scene generation, still remains an open field.
+      			This workshop seeks to foster innovative research in multimodal perception and comprehension, end-to-end driving systems, and application of advanced AIGC techniques to autonomous systems. 
+      			We plan to conduct a challenge comprising two tracks: <b>corner case scene understanding</b> and <b>corner case scene generation</b>. 
+      			The dual-track challenge is designed to advance reliability, interpretability, and safety of autonomous systems by emphasizing robustness in multimodal perception and critical problem-solving in both typical and extreme driving conditions (i.e., corner cases).
+          </p>
+        </div>
+      </div>
+	  <p><br /></p>
+
+
+ 	  <!-- Challenges -->
+	  <div class="row" id="challenges">
+  		<div class="col-xs-12">
+    	  <h2>Challenges</h2>
+  		</div>
+	  </div>
+	  
+	  <!-- Track 1 -->
+	  <div class="row" id="track1">
+  		<div class="col-xs-12">
+    	  <h3>Track 1: Corner Case Scene Understanding</h3>
+	  	</div>
+	  </div>
+	  <div class="row">
+  		<div class="col-xs-12">
+    	  <p>
+      		This track is designed to enhance perception and comprehension abilities of MLLMs for autonomous driving, focusing on global scene understanding, regional reasoning, and actionable suggestions.
+			With the <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> dataset consisting of 5,000 images with textual descriptions covering global driving scenarios, detailed analyses of corner cases, and future driving recommendation, this track seeks to promote the development of more reliable and interpretable autonomous driving agents.
+    	  </p>
+    	  <ul>
+    	  	<li><b>Datasets:</b> Please refer to <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> for detailed dataset introduction and dataset downloads.</li>
+    	  	<li><b>Submission:</b> Under construction. Stay tuned :).</li>
+    	  </ul>
+  		</div>
+	  </div>
+	  <p><br /></p>
+
+	  <!-- Track 2 -->
+	  <div class="row" id="track1">
+  		<div class="col-xs-12">
+    	  <h3>Track 2: Corner Case Scene Generation</h3>
+	  	</div>
+	  </div>
+	  <div class="row">
+  		<div class="col-xs-12">
+    	  <p>
+      		AIGC methods, represented by MagicDrive, play an essential role in next-generation data closed-loop of self-driving.
+      		This track aims to enhance the scene generative abilities of diffusion models to generate multi-view street scene videos consistent with 3D geometric scene descriptors like Bird-Eye-View (BEV) maps and LiDAR bboxes.
+      		With the <a href="https://deepaccident.github.io/">DeepAccident</a> dataset consisting of 285K simulated video clips with the corresponding 3D annotations, this track seeks to promote the development of corner case generation and relieve dependency on real data collection for autonomous driving.
+		  </p>
+		  <ul>
+    	  	<li><b>Datasets:</b> Please refer to <a href="https://deepaccident.github.io/">DeepAccident</a> for detailed dataset introduction and dataset downloads.</li>
+    	  	<li><b>Submission:</b> Under construction. Stay tuned :).</li>
+    	  </ul>
+  		</div>
+	  </div>
+	  <p><br /></p>
+
+	  <!-- Call for Papers -->
+	  <div class="row" id="cfp">
+  		<div class="col-xs-12">
+    	  <h2>Call for Papers</h2>
+  		</div>
+	  </div>
+	  <div class="row">
+  		<div class="col-xs-12">
+      	<p>
+       	  This workshop aims to foster innovative research and development in multimodal perception and comprehension of corner cases for autonomous driving, critical for advancing the next-generation industry-level self-driving solutions. Our focus encompasses a broad range of cutting-edge topics, including but not limited to:
+      </p>
+      <ul>
+        <li>Corner case mining and generation for autonomous driving.</li>
+        <li>3D object detection and scene understanding.</li>
+        <li>Semantic occupancy prediction.</li>
+        <li>Weakly supervised learning for 3D Lidar and 2D images.</li>
+        <li>One/few/zero-shot learning for autonomous perception.</li>
+        <li>End-to-end autonomous driving systems with Large Multimodal Models.</li>
+        <li>Large Language Models techniques adaptable for self-driving systems.</li>
+        <li>Safety/explainability/robustness for end-to-end autonomous driving.</li>
+        <li>Domain adaptation and generalization for end-to-end autonomous driving.</li>
+      </ul>
+      <p>
+        We encourage high-quality, original (i.e., not previously published or accepted for publication in substantially similar form in any peer-reviewed venue including journal, conference, or workshop) submissions. Papers are limited to 14 pages, including figures and tables, in the official ECCV format with additional pages containing only cited references allowed. Accepted papers will be part of the official ECCV proceedings. All the submissions should be anonymous, and the reviewing will be double-blind.
+      </p>
+      <p><b><span style="color:red">Submission details are under construction! Stay tuned! :)</span></b>
+        </p>
+  		</div>
+  	  </div>
+      <p><br /></p>
+	
+	  <!-- Important Dates -->
+	  <div class="row" id="dates">
+  		<div class="col-xs-12">
+    	  <h2>Important Dates (AoE Time, UTC-12)</h2>
+  		</div>
+	  </div>
+	  <div class="row">
+  		<div class="col-xs-12">
+    	  <table class="table table-striped">
+      		<tbody>
+        	<tr>
+          	<td>Challenge Open to Public</td>
+  			<td>July 1, 2024</td>
+        	</tr>
+      		<tr>
+          	<td>Challenge Submission Deadline</td>
+  			<td>TBD</td>
+        	</tr>
+      		<tr>
+          	<td>Challenge Notification to Winner</td>
+  			<td>TBD</td>
+        	</tr>
+      		<tr>
+          	<td>Paper Submission Deadline</td>
+  			<td>Aug 1, 2024</td>
+        	</tr>
+      		<tr>
+          	<td>Paper Notification to Authors</td>
+  			<td>TBD</td>
+        	</tr>
+      		<tr>
+          	<td>Paper Camera Ready Deadline</td>
+  			<td>TBD</td>
+        	</tr>
+      		</tbody>
+    	  </table>
+  		</div>
+	  </div>
+	  <p><br /></p>
+
+	  <!-- Schedule -->
+	  <div class="row" id="schedule">
+  		<div class="col-xs-12">
+    	  <h2>Schedule (Milano Time, UTC+2)</h2>
+  		</div>
+	  </div>
+	  <div class="row">
+  		<div class="col-xs-12">
+     	<table class="table table-striped">
+      	<tbody>
+        <tr>
+          <td>Opening remarks, welcome, and challenge summary.</td>
+          <td>08:50am - 09:00am</td>
+        </tr>
+      	<tr>
+          <td>Invited talk 1: TBD.</td>
+          <td>09:00am - 09:30am</td>
+        </tr>
+      	<tr>
+          <td>Invited talk 2: TBD.</td>
+          <td>09:30am - 10:00am</td>
+        </tr>
+      	<tr>
+          <td>Invited talk 3: TBD.</td>
+          <td>10:00am - 10:30am</td>
+        </tr>
+      	<tr>
+          <td>Poster Session and Coffee Break.</td>
+          <td>10:30am - 11:20am</td>
+        </tr>
+      	<tr>
+          <td>Invited talk 4: TBD.</td>
+          <td>11:20am - 11:50am</td>
+        </tr>
+      	<tr>
+          <td>Invited talk 5: TBD.</td>
+          <td>11:50am - 12:20am</td>
+        </tr>
+      	<tr>
+          <td>Oral talk 1: Winner of Track 1.</td>
+          <td>12:20am - 12:30am</td>
+        </tr>
+      	<tr>
+          <td>Oral talk 2: Winner of Track 2.</td>
+          <td>12:30am - 12:40am</td>
+        </tr>
+        <tr>
+          <td>Awards & Future Plans.</td>
+          <td>12:40am - 13:00am</td>
+        </tr>
+      	</tbody>
+    	</table>
+  		</div>
+	  </div>
+	  <p><br /></p>
+
+<!-- 
+<div class="row" id="speakers">
+  <div class="col-xs-12">
+    <h2>Invited Speakers</h2>
+  </div>
+</div>
+TBD. -->
+
+<!-- <div class="row">
+  <div class="col-md-2">
+    <a href="https://ps.is.mpg.de/~black"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/black.jpeg" /></a>
+  </div>
+  <div class="col-md-10">
+    <p>
+      <b><a href="https://ps.is.mpg.de/~black">Michael J. Black</a></b> He is an Honorarprofessor at the University of Tuebingen and one of the founding directors at the Max Planck Institute for Intelligent Systems in Tübingen, Germany, where he leads the Perceiving Systems department. He was also a Distinguished Amazon Scholar (VP, 2017-2021). Black's research interests in computer vision include optical flow estimation, 3D shape models, human shape and motion analysis, robust statistical methods, and probabilistic models of the visual world. In computational neuroscience his work focuses on probabilistic models of the neural code and applications of neural decoding in neural prosthetics.
+    </p>
+  </div>
+</div>
+<p><br /></p> -->
+
+<!-- <p><br /></p>
+<div class="row" id="speakers">
+  <div class="col-xs-12">
+    <h2>Panelists</h2>
+  </div>
+</div>
+TBD. -->
+
+<!-- <div class="row">
+  <div class="col-md-2">
+    <a href="https://www.cc.gatech.edu/~dbatra/"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/batra.jpeg" /></a>
+  </div>
+  <div class="col-md-10">
+    <p>
+      <b><a href="https://www.cc.gatech.edu/~dbatra/">Dhruv Batra</a></b> is an Associate Professor in the School of
+      Interactive Computing at Georgia Tech and a Research Scientist at Facebook AI Research (FAIR).
+      His research interests lie at the intersection of machine learning, computer vision, natural language processing,
+      and AI. The long-term goal of his research is to develop agents that 'see' (or more generally
+      perceive their environment through vision, audition, or other senses), 'talk' (i.e. hold a natural language dialog
+      grounded in their environment), 'act' (e.g. navigate their environment and interact with it to accomplish goals),
+      and 'reason' (i.e., consider the long-term consequences of their actions).
+      He is a recipient of the Presidential Early Career Award for Scientists and Engineers (PECASE) 2019.
+    </p>
+  </div>
+</div>
+<p><br /></p> -->
+
+<div class="row" id="organizers">
+  <div class="col-xs-12">
+    <h2>Organizers</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2">
+    <a href="https://kaichen1998.github.io/">
+      <img class="people-pic" src="static/img/people/chenkai.jpg"/>
+    </a>
+    <div class="people-name">
+      <a href="https://kaichen1998.github.io/">Kai Chen</a>
+      <h6>HKUST</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://gaoruiyuan.com/">
+      <img class="people-pic" src="static/img/people/gaoruiyuan.jpg"/>
+    </a>
+    <div class="people-name">
+      <a href="https://gaoruiyuan.com/">Ruiyuan Gao</a>
+      <h6>CUHK</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://scholar.google.com/citations?user=2p7x6OUAAAAJ&hl=en">
+      <img class="people-pic" src="static/img/people/honglanqing.jfif" />
+    </a>
+    <div class="people-name">
+      <a href="https://scholar.google.com/citations?user=2p7x6OUAAAAJ&hl=en">Lanqing Hong</a>
+      <h6>Huawei Noah's Ark Lab</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://stephenjia.github.io/">
+      <img class="people-pic" src="static/img/people/jiaxu.jpg"/>
+    </a>
+    <div class="people-name">
+      <a href="https://stephenjia.github.io/">Xu Jia</a>
+      <h6>DLUT</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://sites.google.com/it-caesar.de/homepage/">
+      <img class="people-pic" src="static/img/people/holger.jpg"/>
+    </a>
+    <div class="people-name">
+      <a href="https://sites.google.com/it-caesar.de/homepage/">Holger Caesar</a>
+      <h6>TU Delft</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="./index.html">
+      <img class="people-pic" src="static/img/people/zhaoxinhai.png"/>
+    </a>
+    <div class="people-name">
+      <a href="./index.html">Xinhai Zhao</a>
+      <h6>Huawei Noah's Ark Lab</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://sites.google.com/view/dyyeung/home">
+      <img class="people-pic" src="static/img/people/dyyeung.jpg"/>
+    </a>
+    <div class="people-name">
+      <a href="https://sites.google.com/view/dyyeung/home">Dit-Yan Yeung</a>
+      <h6>HKUST</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://www.cse.cuhk.edu.hk/~qxu/">
+      <img class="people-pic" src="static/img/people/xuqiang.jpg"/>
+    </a>
+    <div class="people-name">
+      <a href="https://www.cse.cuhk.edu.hk/~qxu/">Qiang Xu</a>
+      <h6>CUHK</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://scholar.google.com.sg/citations?user=-rCulKwAAAAJ&hl=en">
+      <img class="people-pic" src="static/img/people/liubingbing.jfif"/>
+    </a>
+    <div class="people-name">
+      <a href="https://scholar.google.com.sg/citations?user=-rCulKwAAAAJ&hl=en">Bingbing Liu</a>
+      <h6>Huawei Noah's Ark Lab</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="https://scholar.google.co.uk/citations?user=T51W57YAAAAJ&hl=en">
+      <img class="people-pic" src="static/img/people/daidengxin.jfif"/>
+    </a>
+    <div class="people-name">
+      <a href="https://scholar.google.co.uk/citations?user=T51W57YAAAAJ&hl=en">Dengxin Dai</a>
+      <h6>Huawei Zurich Research Center</h6>
+    </div>
+  </div>
+
+  <div class="col-xs-2">
+    <a href="http://faculty.dlut.edu.cn/huchuan_Lu/en/index.htm">
+      <img class="people-pic" src="static/img/people/luhuchuan.jpg" />
+    </a>
+    <div class="people-name">
+      <a href="http://faculty.dlut.edu.cn/huchuan_Lu/en/index.htm">Huchuan Lu</a>
+      <h6>DLUT</h6>
+    </div>
+  </div>
+
+
+
+</div>
+
+<p><br /></p>
+
+<div class="row" id="contact">
+  <div class="col-xs-12">
+    <h2>Contact</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      To contact the organizers please use <b>w-coda@googlegroups.com</b>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Acknowledgments</h2>
+  </div>
+</div>
+<p><a name="/acknowledgements"></a></p>
+<div class="row">
+  <div class="col-xs-12">
+    <p>
+      Thanks to <span style="color:#1a1aff;font-weight:400;"> <a href="https://visualdialog.org/">visualdialog.org</a></span> for the webpage format.
+    </p>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
