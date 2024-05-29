@@ -195,8 +195,11 @@ body {
   }
 
   .organizer-col {
-    width: 14.28%; /* 100% / 14 */
+    /*width: 14.28%; /* 100% / 14 */
+    width: auto;
     float: left;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   
   .organizer-row::after {
