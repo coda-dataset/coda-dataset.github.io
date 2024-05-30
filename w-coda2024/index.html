@@ -1,63 +1,55 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <meta name="keywords" content="w-coda, w-coda2024, eccv, workshop, computer vision, natural language processing, machine learning">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <link rel="shortcut icon" href="static/img/site/favicon.png">
+  <meta name="keywords"
+    content="w-coda, w-coda2024, eccv, workshop, computer vision, natural language processing, machine learning">
 
-    <title>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving @ECCV24</title>
-    <meta name="description" content="Multimodal Perception and Comprehension of
+  <link rel="shortcut icon" href="static/img/site/favicon.png">
+
+  <title>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving @ECCV24</title>
+  <meta name="description" content="Multimodal Perception and Comprehension of
     Corner Cases in Autonomous Driving (w-coda), ECCV 2024 Workshop">
 
-    <!--Open Graph Related Stuff-->
-    <meta property="og:title" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving"/>
-    <meta property="og:url" content="https://coda-dataset.github.io/w-coda2024/index.html"/>
-    <meta property="og:description" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving"/>
-    <meta property="og:site_name" content="w-coda2024"/>
-    <meta property="og:image" content=""/>
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving" />
+  <meta property="og:url" content="https://coda-dataset.github.io/w-coda2024/index.html" />
+  <meta property="og:description"
+    content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving" />
+  <meta property="og:site_name" content="w-coda2024" />
+  <meta property="og:image" content="" />
 
-    <!--Twitter Card Stuff-->
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Multimodal Perception and Comprehension for Autonomous Driving"/>
-    <meta name="twitter:image" content="">
-    <meta name="twitter:url" content="https://coda-dataset.github.io/w-coda2024/index.html"/>
-    <meta name="twitter:description" content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving, ECCV 2024 Workshop"/>
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Multimodal Perception and Comprehension for Autonomous Driving" />
+  <meta name="twitter:image" content="">
+  <meta name="twitter:url" content="https://coda-dataset.github.io/w-coda2024/index.html" />
+  <meta name="twitter:description"
+    content="Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving, ECCV 2024 Workshop" />
 
-    <!-- CSS  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
-    <link rel="stylesheet" href="static/css/main.css" media="screen,projection">
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+  <link rel="stylesheet" href="static/css/main.css" media="screen,projection">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
 
-    <style>
+</head>
 
-      .people-pic {
-        max-width: 125px;
-        max-height: 125px;
-        /*width:300px;*/
-        /*height:300px;*/
-        object-fit: cover;
-        border-radius: 0%;
-      }
-    </style>
-  </head>
-
-  <body>
+<body>
 
   <!-- <div class="top-strip"></div> -->
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-    <!-- <div class="navbar-header">
+      <!-- <div class="navbar-header">
       <a class="navbar-brand" href="/"></a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
@@ -66,24 +58,25 @@
       </button>
     </div> -->
 
-    <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav">
-        <li><a href="#intro">Introduction</a></li>
-        <li><a href="#challenges">Challenges</a></li>
-        <li><a href="#cfp">Call for Papers</a></li>
-        <li><a href="#dates">Schedule</a></li>
-        <!-- <li><a href="#speakers">Invited Speake 	rs</a></li> -->
-        <li><a href="#organizers">Organizers</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Past Workshops <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://sslad2022.github.io/" target="__blank">ECCV 2022</a></li>
-            <li><a href="https://sslad2021.github.io/" target="__blank">ICCV 2021</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#cfp">Call for Papers</a></li>
+          <li><a href="#dates">Schedule</a></li>
+          <!-- <li><a href="#speakers">Invited Speake 	rs</a></li> -->
+          <li><a href="#organizers">Organizers</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Past Workshops <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://sslad2022.github.io/" target="__blank">ECCV 2022</a></li>
+              <li><a href="https://sslad2021.github.io/" target="__blank">ICCV 2021</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -93,44 +86,51 @@
       <p><br /></p>
       <div class="row">
         <div class="col-xs-12">
-          <center><h1>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving</h1></center>
-          <center><h2>ECCV 2024 Workshop @ Milano, Italy, Sep 30th Monday</h2></center>
+          <center>
+            <h1>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving</h1>
+          </center>
+          <center>
+            <h2>ECCV 2024 Workshop @ Milano, Italy, Sep 30th Monday</h2>
+          </center>
         </div>
       </div>
       <hr />
 
-	  <!-- <div class="alert alert-info" role="alert">
+      <!-- <div class="alert alert-info" role="alert">
 	    <b>Join live stream <a href="https://live.allintheloop.net/Agenda/ortra/ortraECCV2022/View_agenda/236651">here</a> (ECCV registration required).</b>
 	  </div> -->
 
-	  <!-- <div class="row" id="teaser">  
+      <!-- <div class="row" id="teaser">  
         <div>  
         <img src="static/img/site/teaser.jpg" style="width: 100%; height: auto;"/>
         </div>
       </div> -->
 
       <!-- Visualization -->
-	  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <div class="center" style="text-align:center">
-        <img src="static/img/site/codalm-teaser.jpg" width="90%">
-        <p style="text-align:center">Visual comprehension data samples from <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>.<br /><br /></p>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="center" style="text-align:center">
+          <img src="static/img/site/codalm-teaser.jpg" width="90%">
+          <p style="text-align:center">Visual comprehension data samples from <a
+              href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>.<br /><br /></p>
+        </div>
       </div>
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <div class="center" style="text-align:center">
-	      <img src="static/img/site/magicdrive-teaser.png">
-	      <p style="text-align:center">Street view images generated with <a href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br/><br/></p>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="center" style="text-align:center">
+          <img src="static/img/site/magicdrive-teaser.png">
+          <p style="text-align:center">Street view images generated with <a
+              href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br /><br /></p>
 
-	      <video id="replay-video" muted preload playsinline autoplay loop width="95%">
-	        <source src="static/img/site/magicdrive-vid.mp4" type="video/mp4" />
-	      </video>
-	      <p style="text-align:center">Street view videos generated with <a href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br /><br /></p>
-	    </div>
-    </div>
+          <video id="replay-video" muted preload playsinline autoplay loop width="95%">
+            <source src="static/img/site/magicdrive-vid.mp4" type="video/mp4" />
+          </video>
+          <p style="text-align:center">Street view videos generated with <a
+              href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br /><br /></p>
+        </div>
+      </div>
 
-	  
+
       <!-- Introduction -->
-	  <div class="row" id="intro">
+      <div class="row" id="intro">
         <div class="col-xs-12">
           <h2>Introduction</h2>
         </div>
@@ -138,216 +138,248 @@
       <div class="row">
         <div class="col-xs-12">
           <p>
-            This workshop aims to bridge the gap between state-of-the-art autonomous driving techniques and fully intelligent, reliable self-driving agents, particularly when confronted with <b>corner cases</b>, rare but critical situations that challenge limits of reliable autonomous driving.
-            The advent of Multimodal Large Language Models (MLLMs), represented by GPT-4V, demonstrates the unprecedented capabilities in <b>multimodal perception and comprehension</b> even under dynamic street scenes.
-			      However, leveraging MLLMs to tackle the nuanced challenges of self-driving still remains an open field.
-      			This workshop seeks to foster innovative research in multimodal perception and comprehension, end-to-end driving systems, and the application of advanced AIGC techniques to autonomous systems. 
-      			We conduct a challenge comprising two tracks: <b>corner case scene understanding</b> and <b>corner case scene generation</b>. 
-      			The dual-track challenge is designed to advance reliability and interpretability of autonomous systems in both typical and extreme corner cases.
+            This workshop aims to bridge the gap between state-of-the-art autonomous driving techniques and fully
+            intelligent, reliable self-driving agents, particularly when confronted with <b>corner cases</b>, rare but
+            critical situations that challenge limits of reliable autonomous driving.
+            The advent of Multimodal Large Language Models (MLLMs), represented by GPT-4V, demonstrates the
+            unprecedented capabilities in <b>multimodal perception and comprehension</b> even under dynamic street
+            scenes.
+            However, leveraging MLLMs to tackle the nuanced challenges of self-driving still remains an open field.
+            This workshop seeks to foster innovative research in multimodal perception and comprehension, end-to-end
+            driving systems, and the application of advanced AIGC techniques to autonomous systems.
+            We conduct a challenge comprising two tracks: <b>corner case scene understanding</b> and <b>corner case
+              scene generation</b>.
+            The dual-track challenge is designed to advance reliability and interpretability of autonomous systems in
+            both typical and extreme corner cases.
           </p>
         </div>
       </div>
-	  <p><br /></p>
-
-
- 	  <!-- Challenges -->
-	  <div class="row" id="challenges">
-  		<div class="col-xs-12">
-    	  <h2>Challenges</h2>
-  		</div>
-	  </div>
-    <p><span style="color:red"><b>Note: participants are encouraged to submit reports as workshop papers! Check <a href="./index.html#cfp">Call for Papers</a> for more details!</b>
-    </span>
-    </p>
-	  
-	  <!-- Track 1 -->
-	  <div class="row" id="track1">
-  		<div class="col-xs-12">
-    	  <h3><a href="track1">Track 1</a>: Corner Case Scene Understanding</h3>
-	  	</div>
-	  </div>
-	  <div class="row">
-  		<div class="col-xs-12">
-    	  <p>
-      		This track is designed to enhance perception and comprehension abilities of MLLMs for autonomous driving, focusing on global scene understanding, regional reasoning, and actionable suggestions.
-			With the <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> dataset consisting of 5,000 images with textual descriptions covering global driving scenarios, detailed analyses of corner cases, and future driving recommendation, this track seeks to promote the development of more reliable and interpretable autonomous driving agents.
-    	  </p>
-    	  <ul>
-    	  	<li><b>Datasets:</b> Please refer to <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> for detailed dataset introduction and dataset downloads.</li>
-    	  	<li>Please find more information on the <a href="track1">Track1 page</a>.</li>
-    	  </ul>
-  		</div>
-	  </div>
-	  <p><br /></p>
-
-	  <!-- Track 2 -->
-	  <div class="row" id="track1">
-  		<div class="col-xs-12">
-    	  <h3><a href="track2">Track 2</a>: Corner Case Scene Generation</h3>
-	  	</div>
-	  </div>
-	  <div class="row">
-  		<div class="col-xs-12">
-    	  <p>
-          This track focuses on improving the capabilities of diffusion models to create multi-view street scene videos that are consistent with 3D geometric scene descriptors, including the Bird's Eye View (BEV) maps and 3D LiDAR bounding boxes. Building on <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for controllable 3D video generation, this track aims to advance scene generation for autonomous driving, ensuring better consistency, higher resolution, and longer duration.
-		  </p>
-		  <ul>
-    	  	<li><b>Datasets:</b> Please refer to <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for detailed dataset introduction and dataset downloads (i.e., <thead></thead> <a href="https://www.nuscenes.org/">nuScenes</a> dataset).
-          </li>
-    	  	<li>Please find more information on the <a href="track2">Track2 page</a>.</li>
-    	  </ul>
-  		</div>
-	  </div>
-	  <p><br /></p>
-
-	  <!-- Call for Papers -->
-	  <div class="row" id="cfp">
-  		<div class="col-xs-12">
-    	  <h2>Call for Papers</h2>
-  		</div>
-	  </div>
-	  <div class="row">
-  		<div class="col-xs-12">
-      	<p>
-       	  <b>Overview.</b>
-          This workshop aims to foster innovative research and development in multimodal perception and comprehension of corner cases for autonomous driving, critical for advancing the next-generation industry-level self-driving solutions. Our focus encompasses a broad range of cutting-edge topics, including but not limited to:
-      </p>
-      <ul>
-        <li>Corner case mining and generation for autonomous driving.</li>
-        <li>3D object detection and scene understanding.</li>
-        <li>Semantic occupancy prediction.</li>
-        <li>Weakly supervised learning for 3D Lidar and 2D images.</li>
-        <li>One/few/zero-shot learning for autonomous perception.</li>
-        <li>End-to-end autonomous driving systems with Large Multimodal Models.</li>
-        <li>Large Language Models techniques adaptable for self-driving systems.</li>
-        <li>Safety/explainability/robustness for end-to-end autonomous driving.</li>
-        <li>Domain adaptation and generalization for end-to-end autonomous driving.</li>
-      </ul>
-      <p>
-        <b>Submission tracks.</b>
-        All submissions should be anonymous, and reviewing is double-blind. We encourage two types of submissions: 
-        <ul>
-          <li>
-            <b>Full workshop papers</b> not previously published or accepted for publication in the substantially similar form in any peer-reviewed venues including journals, conferences or workshops. Papers are limited to 14 pages, including both figures and tables, in ECCV format with extra pages containing only cited references allowed. Accepted papers will be part of the official ECCV proceedings. <br/>
-          <a href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WuA4JS5uZpi">[Download LaTex Template]</a><br/>
-          <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA">[OpenReview Submission Site]</a>
-          </li>
-          <li>
-            <b>Extended abstracts</b> not previously published or accepted for publication in substantially similar form in any other peer-reviewed venues including journals, conferences or workshops. Papers are limited to 4 pages, and will NOT be included in official ECCV proceedings (non-archival), which are allowed for re-submission to later conferences. <br/>
-          <a href="https://github.com/cvpr-org/author-kit/releases">[Download LaTex Template]</a> <br/>
-          <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA_Abstract_Paper_Track">[OpenReview Submission Site]</a>
-          </li>
-        </ul>
-      </p>
-  		</div>
-  	  </div>
       <p><br /></p>
-	
-	  <!-- Important Dates -->
-	  <div class="row" id="dates">
-  		<div class="col-xs-12">
-    	  <h2>Important Dates (AoE Time, UTC-12)</h2>
-  		</div>
-	  </div>
-	  <div class="row">
-  		<div class="col-xs-12">
-    	  <table class="table table-striped">
-      		<tbody>
-        	<tr>
-          	<td>Challenge Open to Public</td>
-  			<td>June 15, 2024</td>
-        	</tr>
-      		<tr>
-          	<td>Challenge Submission Deadline</td>
-  			<td>Aug 15, 2024 11:59 PM</td>
-        	</tr>
-      		<tr>
-          	<td>Challenge Notification to Winner</td>
-  			<td>Sep 1, 2024</td>
-        	</tr>
-      		<tr>
-          	<td>Full Paper Submission Deadline</td>
-  			<td>Aug 1, 2024 11:59 PM</td>
-        	</tr>
-      		<tr>
-          	<td>Full Paper Notification to Authors</td>
-  			<td>Aug 10, 2024 11:59 PM</td>
-        	</tr>
-      		<tr>
-          	<td>Full Paper Camera Ready Deadline</td>
-  			<td>Aug 15, 2024 11:59 PM</td>
-        	</tr>
-          <tr>
-            <td>Abstract Paper Submission Deadline</td>
-            <td>Sep 1, 2024 11:59 PM</td>
-          </tr>
-          <tr>
-            <td>Abstract Paper Notification to Authors</td>
-            <td>Sep 7, 2024 11:59 PM</td>
-          </tr>
-          <tr>
-            <td>Abstract Paper Camera Ready Deadline</td>
-        <td>Sep 10, 2024 11:59 PM</td>
-          </tr>
-      		</tbody>
-    	  </table>
-  		</div>
-	  </div>
-	  <p><br /></p>
 
-	  <!-- Schedule -->
-	  <div class="row" id="schedule">
-  		<div class="col-xs-12">
-    	  <h2>Schedule (Milano Time, UTC+2)</h2>
-  		</div>
-	  </div>
-	  <div class="row">
-  		<div class="col-xs-12">
-     	<table class="table table-striped">
-      	<tbody>
-        <tr>
-          <td>Opening Remarks, Welcome, and Challenge Summary</td>
-          <td>08:50 AM - 09:00 AM</td>
-        </tr>
-      	<tr>
-          <td>Invited Talk 1: TBD</td>
-          <td>09:00 AM - 09:45 AM</td>
-        </tr>
-      	<tr>
-          <td>Invited Talk 2: TBD</td>
-          <td>09:45 AM - 10:30 AM</td>
-        </tr>
-      	<tr>
-          <td>Poster Session and Coffee Break</td>
-          <td>10:30 AM - 11:00 AM</td>
-        </tr>
-      	<tr>
-          <td>Invited Talk 3: TBD</td>
-          <td>11:00 AM - 11:45 AM</td>
-        </tr>
-      	<tr>
-          <td>Invited Talk 4: TBD</td>
-          <td>11:45 AM - 12:30 AM</td>
-        </tr>
-      	<tr>
-          <td>Oral Talk 1: Winner of Track 1</td>
-          <td>12:30 AM - 12:40 AM</td>
-        </tr>
-      	<tr>
-          <td>Oral Talk 2: Winner of Track 2</td>
-          <td>12:40 AM - 12:50 AM</td>
-        </tr>
-        <tr>
-          <td>Awards & Future Plans</td>
-          <td>12:50 AM - 13:00 AM</td>
-        </tr>
-      	</tbody>
-    	</table>
-  		</div>
-	  </div>
-	  <p><br /></p>
 
-<!-- 
+      <!-- Challenges -->
+      <div class="row" id="challenges">
+        <div class="col-xs-12">
+          <h2>Challenges</h2>
+        </div>
+      </div>
+      <p><span style="color:red"><b>Note: participants are encouraged to submit reports as workshop papers! Check <a
+              href="./index.html#cfp">Call for Papers</a> for more details!</b>
+        </span>
+      </p>
+
+      <!-- Track 1 -->
+      <div class="row" id="track1">
+        <div class="col-xs-12">
+          <h3><a href="track1">Track 1</a>: Corner Case Scene Understanding</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            This track is designed to enhance perception and comprehension abilities of MLLMs for autonomous driving,
+            focusing on global scene understanding, regional reasoning, and actionable suggestions.
+            With the <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> dataset consisting of 5,000 images
+            with textual descriptions covering global driving scenarios, detailed analyses of corner cases, and future
+            driving recommendation, this track seeks to promote the development of more reliable and interpretable
+            autonomous driving agents.
+          </p>
+          <ul>
+            <li><b>Datasets:</b> Please refer to <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> for
+              detailed dataset introduction and dataset downloads.</li>
+            <li>Please find more information on the <a href="track1">Track1 page</a>.</li>
+          </ul>
+        </div>
+      </div>
+      <p><br /></p>
+
+      <!-- Track 2 -->
+      <div class="row" id="track1">
+        <div class="col-xs-12">
+          <h3><a href="track2">Track 2</a>: Corner Case Scene Generation</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            This track focuses on improving the capabilities of diffusion models to create multi-view street scene
+            videos that are consistent with 3D geometric scene descriptors, including the Bird's Eye View (BEV) maps and
+            3D LiDAR bounding boxes. Building on <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for
+            controllable 3D video generation, this track aims to advance scene generation for autonomous driving,
+            ensuring better consistency, higher resolution, and longer duration.
+          </p>
+          <ul>
+            <li><b>Datasets:</b> Please refer to <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for
+              detailed dataset introduction and dataset downloads (i.e., <thead></thead> <a
+                href="https://www.nuscenes.org/">nuScenes</a> dataset).
+            </li>
+            <li>Please find more information on the <a href="track2">Track2 page</a>.</li>
+          </ul>
+        </div>
+      </div>
+      <p><br /></p>
+
+      <!-- Call for Papers -->
+      <div class="row" id="cfp">
+        <div class="col-xs-12">
+          <h2>Call for Papers</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            <b>Overview.</b>
+            This workshop aims to foster innovative research and development in multimodal perception and comprehension
+            of corner cases for autonomous driving, critical for advancing the next-generation industry-level
+            self-driving solutions. Our focus encompasses a broad range of cutting-edge topics, including but not
+            limited to:
+          </p>
+          <ul>
+            <li>Corner case mining and generation for autonomous driving.</li>
+            <li>3D object detection and scene understanding.</li>
+            <li>Semantic occupancy prediction.</li>
+            <li>Weakly supervised learning for 3D Lidar and 2D images.</li>
+            <li>One/few/zero-shot learning for autonomous perception.</li>
+            <li>End-to-end autonomous driving systems with Large Multimodal Models.</li>
+            <li>Large Language Models techniques adaptable for self-driving systems.</li>
+            <li>Safety/explainability/robustness for end-to-end autonomous driving.</li>
+            <li>Domain adaptation and generalization for end-to-end autonomous driving.</li>
+          </ul>
+          <p>
+            <b>Submission tracks.</b>
+            All submissions should be anonymous, and reviewing is double-blind. We encourage two types of submissions:
+          <ul>
+            <li>
+              <b>Full workshop papers</b> not previously published or accepted for publication in the substantially
+              similar form in any peer-reviewed venues including journals, conferences or workshops. Papers are limited
+              to 14 pages, including both figures and tables, in ECCV format with extra pages containing only cited
+              references allowed. Accepted papers will be part of the official ECCV proceedings. <br />
+              <a
+                href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WuA4JS5uZpi">[Download
+                LaTex Template]</a><br />
+              <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA">[OpenReview Submission
+                Site]</a>
+            </li>
+            <li>
+              <b>Extended abstracts</b> not previously published or accepted for publication in substantially similar
+              form in any other peer-reviewed venues including journals, conferences or workshops. Papers are limited to
+              4 pages, and will NOT be included in official ECCV proceedings (non-archival), which are allowed for
+              re-submission to later conferences. <br />
+              <a href="https://github.com/cvpr-org/author-kit/releases">[Download LaTex Template]</a> <br />
+              <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA_Abstract_Paper_Track">[OpenReview
+                Submission Site]</a>
+            </li>
+          </ul>
+          </p>
+        </div>
+      </div>
+      <p><br /></p>
+
+      <!-- Important Dates -->
+      <div class="row" id="dates">
+        <div class="col-xs-12">
+          <h2>Important Dates (AoE Time, UTC-12)</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>Challenge Open to Public</td>
+                <td>June 15, 2024</td>
+              </tr>
+              <tr>
+                <td>Challenge Submission Deadline</td>
+                <td>Aug 15, 2024 11:59 PM</td>
+              </tr>
+              <tr>
+                <td>Challenge Notification to Winner</td>
+                <td>Sep 1, 2024</td>
+              </tr>
+              <tr>
+                <td>Full Paper Submission Deadline</td>
+                <td>Aug 1, 2024 11:59 PM</td>
+              </tr>
+              <tr>
+                <td>Full Paper Notification to Authors</td>
+                <td>Aug 10, 2024 11:59 PM</td>
+              </tr>
+              <tr>
+                <td>Full Paper Camera Ready Deadline</td>
+                <td>Aug 15, 2024 11:59 PM</td>
+              </tr>
+              <tr>
+                <td>Abstract Paper Submission Deadline</td>
+                <td>Sep 1, 2024 11:59 PM</td>
+              </tr>
+              <tr>
+                <td>Abstract Paper Notification to Authors</td>
+                <td>Sep 7, 2024 11:59 PM</td>
+              </tr>
+              <tr>
+                <td>Abstract Paper Camera Ready Deadline</td>
+                <td>Sep 10, 2024 11:59 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p><br /></p>
+
+      <!-- Schedule -->
+      <div class="row" id="schedule">
+        <div class="col-xs-12">
+          <h2>Schedule (Milano Time, UTC+2)</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <table class="table table-striped">
+            <tbody>
+              <tr>
+                <td>Opening Remarks, Welcome, and Challenge Summary</td>
+                <td>08:50 AM - 09:00 AM</td>
+              </tr>
+              <tr>
+                <td>Invited Talk 1: TBD</td>
+                <td>09:00 AM - 09:45 AM</td>
+              </tr>
+              <tr>
+                <td>Invited Talk 2: TBD</td>
+                <td>09:45 AM - 10:30 AM</td>
+              </tr>
+              <tr>
+                <td>Poster Session and Coffee Break</td>
+                <td>10:30 AM - 11:00 AM</td>
+              </tr>
+              <tr>
+                <td>Invited Talk 3: TBD</td>
+                <td>11:00 AM - 11:45 AM</td>
+              </tr>
+              <tr>
+                <td>Invited Talk 4: TBD</td>
+                <td>11:45 AM - 12:30 AM</td>
+              </tr>
+              <tr>
+                <td>Oral Talk 1: Winner of Track 1</td>
+                <td>12:30 AM - 12:40 AM</td>
+              </tr>
+              <tr>
+                <td>Oral Talk 2: Winner of Track 2</td>
+                <td>12:40 AM - 12:50 AM</td>
+              </tr>
+              <tr>
+                <td>Awards & Future Plans</td>
+                <td>12:50 AM - 13:00 AM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p><br /></p>
+
+      <!-- 
 <div class="row" id="speakers">
   <div class="col-xs-12">
     <h2>Invited Speakers</h2>
@@ -355,7 +387,7 @@
 </div>
 TBD. -->
 
-<!-- <div class="row">
+      <!-- <div class="row">
   <div class="col-md-2">
     <a href="https://ps.is.mpg.de/~black"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/black.jpeg" /></a>
   </div>
@@ -367,7 +399,7 @@ TBD. -->
 </div>
 <p><br /></p> -->
 
-<!-- <p><br /></p>
+      <!-- <p><br /></p>
 <div class="row" id="speakers">
   <div class="col-xs-12">
     <h2>Panelists</h2>
@@ -375,7 +407,7 @@ TBD. -->
 </div>
 TBD. -->
 
-<!-- <div class="row">
+      <!-- <div class="row">
   <div class="col-md-2">
     <a href="https://www.cc.gatech.edu/~dbatra/"><img class="people-pic" style="float:left;margin-right:50px;" src="static/img/people/batra.jpeg" /></a>
   </div>
@@ -394,213 +426,219 @@ TBD. -->
 </div>
 <p><br /></p> -->
 
-<div class="row" id="organizers">
-  <div class="col-xs-12">
-    <h2>Organizers</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-  <div class="organizer-col">
-    <a href="https://kaichen1998.github.io/">
-      <img class="people-pic" src="static/img/people/chenkai.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://kaichen1998.github.io/">Kai Chen</a>
-      <h6>HKUST</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="https://gaoruiyuan.com/">
-      <img class="people-pic" src="static/img/people/gaoruiyuan.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://gaoruiyuan.com/">Ruiyuan Gao</a>
-      <h6>CUHK</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/honglanqing.jfif" />
-    <div class="people-name">
-      Lanqing Hong
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/xuhang.png" />
-    <div class="people-name">
-      Hang Xu
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="https://stephenjia.github.io/">
-      <img class="people-pic" src="static/img/people/jiaxu.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://stephenjia.github.io/">Xu Jia</a>
-      <h6>DLUT</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="https://sites.google.com/it-caesar.de/homepage/">
-      <img class="people-pic" src="static/img/people/holger.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://sites.google.com/it-caesar.de/homepage/">Holger Caesar</a>
-      <h6>TU Delft</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/daidengxin.jfif"/>
-    <div class="people-name">
-      Dengxin Dai
-      <h6>Huawei</h6>
-    </div>
-  </div>
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/liubingbing.jfif"/>
-    <div class="people-name">
-      Bingbing Liu
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/Dzmitry_Tsishkou.jpg" />
-    <div class="people-name">
-      Dzmitry Tsishkou
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/xusongcen.jpg" />
-    <div class="people-name">
-      Songcen Xu
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/XuChunjing.jpg" />
-    <div class="people-name">
-      Chunjing Xu
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="https://www.cse.cuhk.edu.hk/~qxu/">
-      <img class="people-pic" src="static/img/people/xuqiang.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://www.cse.cuhk.edu.hk/~qxu/">Qiang Xu</a>
-      <h6>CUHK</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="http://faculty.dlut.edu.cn/huchuan_Lu/en/index.htm">
-      <img class="people-pic" src="static/img/people/luhuchuan.jpg" />
-    </a>
-    <div class="people-name">
-      <a href="http://faculty.dlut.edu.cn/huchuan_Lu/en/index.htm">Huchuan Lu</a>
-      <h6>DLUT</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="https://sites.google.com/view/dyyeung/home">
-      <img class="people-pic" src="static/img/people/dyyeung.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://sites.google.com/view/dyyeung/home">Dit-Yan Yeung</a>
-      <h6>HKUST</h6>
-    </div>
-  </div>
-</div>
-</div>
-
-
-  <div class="row" id="challenge_committee">
-    <div class="col-xs-12">
-      <br />
-      <h2>Challenge Committee</h2>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/zhaoxinhai.png"/>
-    <div class="people-name">
-      Xinhai Zhao
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/tianmeng.jpg"/>
-    <div class="people-name">
-      Meng Tian
-      <h6>Huawei</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">
-      <img class="people-pic" src="static/img/people/Lipengxiang.jpg"/>
-    </a>
-    <div class="people-name">
-      <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">Pengxiang Li</a>
-      <h6>DLUT</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/liyanze.jpg"/>
-    <div class="people-name">
-      Yanze Li
-      <h6>DLUT</h6>
-    </div>
-  </div>
-
-  <div class="organizer-col">
-    <img class="people-pic" src="static/img/people/zhangwenhua.jpg"/>
-    <div class="people-name">
-      Wenhua Zhang
-      <h6>DLUT</h6>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-
-<p><br /></p>
-
-<div class="row" id="contact">
-  <div class="col-xs-12">
-    <h2>Contact</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <p>
-      To contact the organizers please use <b>w-coda2024@googlegroups.com</b>
-    </p>
-  </div>
-</div>
-
-<hr />
+      <div class="row" id="organizers">
+        <div class="col-xs-12">
+          <h2>Organizers</h2>
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- <div class="container" style="max-width: 100%; margin-left:auto; margin-right:auto"> -->
+          <div class="organizers-container">
+            <div class="organizer-col">
+              <a href="https://kaichen1998.github.io/">
+                <img class="people-pic" src="static/img/people/chenkai.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://kaichen1998.github.io/">Kai Chen</a>
+                <h6>HKUST</h6>
+              </div>
+            </div>
 
-  </body>
+            <div class="organizer-col">
+              <a href="https://gaoruiyuan.com/">
+                <img class="people-pic" src="static/img/people/gaoruiyuan.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://gaoruiyuan.com/">Ruiyuan Gao</a>
+                <h6>CUHK</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/honglanqing.jfif" />
+              <div class="people-name">
+                Lanqing Hong
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/xuhang.png" />
+              <div class="people-name">
+                Hang Xu
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <a href="https://stephenjia.github.io/">
+                <img class="people-pic" src="static/img/people/jiaxu.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://stephenjia.github.io/">Xu Jia</a>
+                <h6>DLUT</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <a href="https://sites.google.com/it-caesar.de/homepage/">
+                <img class="people-pic" src="static/img/people/holger.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://sites.google.com/it-caesar.de/homepage/">Holger Caesar</a>
+                <h6>TU Delft</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/daidengxin.jfif" />
+              <div class="people-name">
+                Dengxin Dai
+                <h6>Huawei</h6>
+              </div>
+            </div>
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/liubingbing.jfif" />
+              <div class="people-name">
+                Bingbing Liu
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/Dzmitry_Tsishkou.jpg" />
+              <div class="people-name">
+                Dzmitry Tsishkou
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/xusongcen.jpg" />
+              <div class="people-name">
+                Songcen Xu
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/XuChunjing.jpg" />
+              <div class="people-name">
+                Chunjing Xu
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <a href="https://www.cse.cuhk.edu.hk/~qxu/">
+                <img class="people-pic" src="static/img/people/xuqiang.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://www.cse.cuhk.edu.hk/~qxu/">Qiang Xu</a>
+                <h6>CUHK</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <a href="http://faculty.dlut.edu.cn/huchuan_Lu/en/index.htm">
+                <img class="people-pic" src="static/img/people/luhuchuan.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="http://faculty.dlut.edu.cn/huchuan_Lu/en/index.htm">Huchuan Lu</a>
+                <h6>DLUT</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <a href="https://sites.google.com/view/dyyeung/home">
+                <img class="people-pic" src="static/img/people/dyyeung.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://sites.google.com/view/dyyeung/home">Dit-Yan Yeung</a>
+                <h6>HKUST</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" id="challenge_committee">
+        <div class="col-xs-12">
+          <br />
+          <h2>Challenge Committee</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- <div class="container" style="max-width: 90%"> -->
+          <div class="organizers-container">
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/zhaoxinhai.png" />
+              <div class="people-name">
+                Xinhai Zhao
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/tianmeng.jpg" />
+              <div class="people-name">
+                Meng Tian
+                <h6>Huawei</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">
+                <img class="people-pic" src="static/img/people/Lipengxiang.jpg" />
+              </a>
+              <div class="people-name">
+                <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">Pengxiang Li</a>
+                <h6>DLUT</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/liyanze.jpg" />
+              <div class="people-name">
+                Yanze Li
+                <h6>DLUT</h6>
+              </div>
+            </div>
+
+            <div class="organizer-col">
+              <img class="people-pic" src="static/img/people/zhangwenhua.jpg" />
+              <div class="people-name">
+                Wenhua Zhang
+                <h6>DLUT</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p><br /></p>
+
+      <div class="row" id="contact">
+        <div class="col-xs-12">
+          <h2>Contact</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            To contact the organizers please use <b>w-coda2024@googlegroups.com</b>
+          </p>
+        </div>
+      </div>
+
+      <hr />
+    </div>
+  </div>
+
+</body>
+
 </html>
