@@ -26,6 +26,20 @@
     <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
     <script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquerycsvtotable/jquery.csvToTable.js"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+    </script>
+    <style>
+    a {
+      color: #337ab7;
+    }
+  </style>
   </head>
 
   <body>
@@ -63,10 +77,11 @@
       </div>
     </div>
 
-    <!-- Title -->
     <div class="container">
       <div class="page-content">
         <p><br /></p>
+        
+        <!-- Title -->
         <div class="row">
           <div class="col-xs-12">
             <center>
@@ -79,7 +94,24 @@
         </div>
         <hr />
 
-        <!-- Track 1 -->
+        <!-- Images -->
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="center" style="text-align:center">
+            <img src="../static/img/site/codalm-teaser.jpg" width="90%">
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <div class="center" style="text-align:center">
+            <img src="../static/img/site/codalm-teaser2.jpg" width="90%">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="center" style="text-align:center">
+            <p style="text-align:center">Visual perception and comprehension data samples from <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>.<p><br /></p>
+          </div>
+        </div>
+
+        <!-- Overview -->
         <div class="row" id="track1">
           <div class="col-xs-12">
             <h2>Track 1: Corner Case Scene Understanding</h2>
@@ -88,24 +120,14 @@
         <div class="row">
           <div class="col-xs-12">
             <p>
-              This track is designed to enhance perception and comprehension abilities of MLLMs for autonomous driving, focusing on global scene understanding,
-              regional reasoning, and actionable suggestions. With the
-              <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>
-              dataset consisting of 5,000 images with textual descriptions covering global driving scenarios, detailed analyses of corner cases, and future
-              driving recommendation, this track seeks to promote the development of more reliable and interpretable autonomous driving agents.
+              This competition is dedicated to enhancing multimodal perception and comprehension capabilities of MLLMs for autonomous driving, focusing on the global scene understanding, local area reasoning, and actionable navigation. With our <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> dataset, constructed from <a href="https://coda-dataset.github.io">CODA</a> dataset and including ~10K images with the corresponding textual descriptions covering global driving scenarios, detailed analyses of corner cases, and future driving recommendation, this competition seeks to promote the development of more reliable and interpretable autonomous driving agents.              
             </p>
-            <ul>
-              <li>
-                <b>Datasets:</b> Please refer to
-                <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>
-                for detailed dataset introduction and dataset downloads.
-              </li>
-              <li><b>Submission:</b> Under construction. Stay tuned :).</li>
-            </ul>
           </div>
         </div>
+        <p><br /></p>
 
-        <div class="row" id="track1">
+        <!-- Challenge Progress -->
+        <div class="row" id="progress">
           <div class="col-xs-12">
             <h2>Challenge Progress</h2>
           </div>
@@ -118,8 +140,10 @@
             </div>
           </div>
         </div>
+        <p><br /></p>
 
-        <div class="row" id="track1">
+        <!-- Leaderboard -->
+        <div class="row" id="leaderboard">
           <div class="col-xs-12">
             <h2>Leaderboard</h2>
           </div>
@@ -136,6 +160,136 @@
             </script>
           </div>
         </div>
+        <hr />
+        <!-- <p><br /></p> -->
+
+        
+        <!-- Task Description -->
+        <div class="row" id="task">
+          <div class="col-xs-12">
+            <h2>Task Description</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              <b>General Perception.</b>&nbsp; The foundational aspect of the general perception task lies in the comprehensive understanding of key entities within driving scenes, including the appearance, location, and the reasons they influence driving. Given a first-view road driving scene, MLLMs are required not only to <code>describe</code> all the potential road obstacles in the traffic scenes but also to provide <code>explanations</code> about why they would affect the driving decisions. We primarily focus on seven categories of obstacles, including vehicles, vulnerable road users (VRUs), traffic cones, traffic lights, traffic signs, barriers, and miscellaneous. 
+            </p>
+            <p>
+              <b>Region Perception.</b>&nbsp; This task measures the MLLMs' capability to understand corner objects when provided with <code>specific bounding boxes</code>, followed by describing these objects and explaining why they might affect self-driving behavior. Note that for region perception, there are <code>no constraints on how to use bounding boxes in MLLMs</code>. Any possible encoding leading to better performance is feasible. We provide an example by visualizing the bounding boxes on images with red rectangles <a href="https://github.com/DLUT-LYZ/CODA-LM/tree/main?tab=readme-ov-file#data-usage">here</a> for reference.
+            </p>
+            <p>
+              <b>Driving Suggestions.</b>&nbsp; This task aims to evaluate MLLMs' capability in formulating driving advice in the autonomous driving domain. This task is closely related to the planning process of autonomous driving, requiring MLLMs to provide <code>optimal driving suggestions</code> for the ego car after correctly perceiving the general and regional aspects of the current driving environment. 
+            </p>
+          </div>
+        </div>
+        <p><br /></p>
+
+
+        <!-- Data Description -->
+        <div class="row" id="data">
+          <div class="col-xs-12">
+            <h2>Data Description</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              <b>Training.</b>&nbsp; <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> is a real-world multimodal autonomous driving dataset. Constructed on CODA dataset, CODA-LM contains high-quality annotations for general perception, region perception, and driving suggestions. The training dataset contains 4884 samples, with a validation set with 4384 samples optionally for training. For more details, please refer to the <a href="https://arxiv.org/abs/2404.10595">arxiv report</a> and <a href="https://coda-dataset.github.io/coda-lm/">dataset website</a>. 
+              <br/>Besides CODA-LM, <code>any external training resources are all allowed</code>, which, however, should be discussed in technical reports.
+            </p>
+            <p>
+              <b>Evaluation.</b>&nbsp; <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> test set, containing 500 samples, is used for our evaluation. For each of the three tasks, we follow the official evaluation protocols of CODA-LM and calculate a <code>GPT-Score</code> separately using a GPT-4 judge, with the <code>Final-Score</code> as the average.
+              $$\text{Final-Score}=
+              \frac{1}{3}(\text{GPT-Score}_{\text{General Perception}} + \text{GPT-Score}_{\text{Region Perception}} + \text{GPT-Score}_{\text{Driving Suggestions}})
+              $$
+            </p>
+            <p>
+              <b>Download.</b>&nbsp; Check the <a href="https://github.com/DLUT-LYZ/CODA-LM?tab=readme-ov-file#data-preparation">official Github Repo</a> of CODA-LM for more details.
+            </p>
+            <p>
+              <b>Terms of Use.</b>&nbsp; CODA-LM dataset is released only for academic research, which is free to researchers from educational or research institutions for non-commercial purposes. When downloading the dataset you agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any commercial purposes, any portion of the images and any portion of derived data. For the full terms of use information, please refer to <a target="_blank" href="https://coda-dataset.github.io/about.html#terms_of_use">CODA/term of use</a> website.
+            </p>
+          </div>
+        </div>
+        <p><br /></p>
+
+
+        <!-- Submissions -->
+        <div class="row" id="submission">
+          <div class="col-xs-12">
+            <h2>Submission</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              To submit your results, you must strictly complete the following steps, otherwise your submissions will not be considered valid.
+              <ul>
+                <li>For the first time, register your team information <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvh7zmV6BicQlguOVo0t_N0x7iGCk7td6DMXXWw8-YJbtiyg/viewform">here</a>. Each team can only have one registration, and each registration is valid for one single track. Note that your <code>Team Name</code> will be used as reference for evaluation latter.</code></li>
+                <li>Download CODA-LM, and convert annotations into basic VQA formats via <a href="https://github.com/DLUT-LYZ/CODA-LM/blob/main/convert2vqa.py">this script</a>. After conversion, you will have three jsonl files (<code>general_perception.jsonl</code>, <code>region_perception.jsonl</code>, <code>driving_suggestion.jsonl</code>) under <code>$CODA_ROOT/Test/vqa_anno</code>, all in the following formats:</li>
+<pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">
+<code>{"question_id": 0, "image": test/images/0001.jpg, "question": &lt;str&gt;}
+{"question_id": 1, "image": test/images/0012.jpg, "question": &lt;str&gt;}
+{"question_id": 2, "image": test/images/0013.jpg, "question": &lt;str&gt;}
+...
+</code></pre>
+                <li>Run your inference with the above annotation files, and save your responses with an extra <code>answer</code> key. You must not modify the contents of <code>question_id</code>, <code>image</code> and <code>question</code>, which are essential for evaluation. Note for region perception, even if you are encouraged to utilize different bbox encodings, you still need to maintain contents of the three keys. Your results should be like:</li>
+<pre style="text-align: left; white-space: pre; display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);">
+<code>{"question_id": 0, "image": test/images/0001.jpg, "question": &lt;str&gt;, "answer": &lt;str&gt;}
+{"question_id": 1, "image": test/images/0012.jpg, "question": &lt;str&gt;, "answer": &lt;str&gt;}
+{"question_id": 2, "image": test/images/0013.jpg, "question": &lt;str&gt;, "answer": &lt;str&gt;}
+...
+</code></pre>
+                <li>Name results as <code>general_perception_answer.jsonl</code>, <code>region_perception_answer.jsonl</code>, <code>driving_suggestion_answer.jsonl</code>, zip them in <code>results.zip</code>, and submit via <a href="https://mycuhk-my.sharepoint.com/:f:/g/personal/1155157018_link_cuhk_edu_hk/EhfbPygkLBFFrORauugRIk8BPvUBh1qR9p07vnne5LcqBA">OneDrive</a>. To better understand the submission format, we also provide an example submission <a href="./data/sample_answer.zip">here</a>. Enter your <code>Track</code> and <code>Team Name</code> and click Upload.</li>
+                <div class="center" style="text-align:center">
+                  <img src="../static/img/site/onedrive_track1.PNG" width="90%">
+                </div>
+                <li>Once a week, we will download all the latest submissions, run evaluation, and update <a href="#progress">Challenge Progress</a> and <a href="#leaderboard">Leaderboard</a>.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        <p><br /></p>
+
+
+        <!-- General Rules -->
+        <div class="row" id="rules">
+          <div class="col-xs-12">
+            <h2>General Rules</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <ul>
+              <li>To ensure fairness, the <b>Top-3</b> winners are required to submit a technical report for re-productivity verification.</li>
+              <li>Each entry is required to be associated to a team and its affiliation (all members of one team must register as one).</li>
+              <li>Using multiple accounts to increase the number of submissions is strictly prohibited.</li>
+              <li>Results should follow the correct format and be submitted following the instructions, which, otherwise, will not be considered as valid submissions. Detailed information is provided on the <a href="#submission">Submission</a> section.
+              <li>The best entry of each team is public in the leaderboard at all time.</li>
+              <li>The organizer reserves the absolute right to disqualify entries that are incomplete, illegible, late, or violating the rules.</li>
+            </ul>
+          </div>
+        </div>
+        <p><br /></p>
+        
+
+        <!-- Awards -->
+        <div class="row" id="track1">
+          <div class="col-xs-12">
+            <h2>Awards</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <p>
+              Participants with the most successful and innovative entries will be invited to present at this workshop and receive awards. A 1,000 USD cash prize will be awarded to the top team, while the 2nd and 3rd will be awarded with 800 USD and 600 USD separately.
+            </p>
+          </div>
+        </div>
+        <p><br /></p>
+
+        
 
         <div class="row" id="contact">
           <div class="col-xs-12">

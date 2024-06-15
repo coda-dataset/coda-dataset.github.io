@@ -1,158 +1,534 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <meta name="keywords" content="w-coda, w-coda2024, eccv, workshop, computer vision, natural language processing, machine learning" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <link rel="shortcut icon" href="../static/img/site/favicon.png" />
+  <meta name="keywords"
+    content="w-coda, w-coda2024, eccv, workshop, computer vision, natural language processing, machine learning" />
 
-    <title>W-CODA @ECCV24 Track 2</title>
-    <meta name="description" content="Corner Case Scene Generation, W-CODA, ECCV 2024 Workshop" />
+  <link rel="shortcut icon" href="../static/img/site/favicon.png" />
 
-    <!-- CSS  -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css" />
-    <link rel="stylesheet" href="../static/css/main.css" media="screen,projection" />
+  <title>W-CODA @ECCV24 Track 2</title>
+  <meta name="description" content="Corner Case Scene Generation, W-CODA, ECCV 2024 Workshop" />
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
-    <script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquerycsvtotable/jquery.csvToTable.js"></script>
-  </head>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css" />
+  <link rel="stylesheet" href="../static/css/main.css" media="screen,projection" />
 
-  <body>
-    <!-- <div class="top-strip"></div> -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <!-- <div class="navbar-header">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script lang="javascript" src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+  <script
+    src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquerycsvtotable/jquery.csvToTable.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            processEscapes: true
+        }
+    });
+    </script>
+  <style>
+    a {
+      color: #337ab7;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="top-strip"></div> -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- <div class="navbar-header">
           <a class="navbar-brand" href="/"></a>
           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
             <span class="icon-bar"></span>
           </button>
         </div> -->
 
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li><a href="../">W-CODA Homepage</a></li>
-            <li><a href="../track1/">Track1</a></li>
-            <li><a href="../track2/">Track2</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-                >Past Workshops <span class="caret"></span
-              ></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="https://sslad2022.github.io/" target="__blank">ECCV 2022</a>
-                </li>
-                <li>
-                  <a href="https://sslad2021.github.io/" target="__blank">ICCV 2021</a>
-                </li>
-              </ul>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li><a href="../">W-CODA Homepage</a></li>
+          <li><a href="../track1/">Track1</a></li>
+          <li><a href="../track2/">Track2</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Past Workshops <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="https://sslad2022.github.io/" target="__blank">ECCV 2022</a>
+              </li>
+              <li>
+                <a href="https://sslad2021.github.io/" target="__blank">ICCV 2021</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="container">
+    <div class="page-content">
+      <p><br /></p>
+      <div class="row">
+        <div class="col-xs-12">
+          <center>
+            <h1>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving</h1>
+          </center>
+          <center>
+            <h2>ECCV 2024 Workshop @ Milano, Italy, Sep 30th Monday</h2>
+          </center>
+        </div>
+      </div>
+      <hr />
+      
+      <!-- Images -->
+      <div class="col-xs-12">
+        <div class="center" style="text-align:center">
+          <video id="replay-video" muted preload playsinline autoplay loop width="75%">
+            <source src="../static/img/site/magicdrive-vid.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="center" style="text-align:center">
+          <p style="text-align:center">Street view videos generated with <a href="https://gaoruiyuan.com/magicdrive/" target="__blank">MagicDrive</a>.<p><br /></p>
+        </div>
+      </div>
+
+      <!-- Track 1 -->
+      <div class="row" id="track1">
+        <div class="col-xs-12">
+          <h2>Track 2: Corner Case Scene Generation</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            This track focuses on improving the capabilities of diffusion models to create multi-view street scene
+            videos that are consistent with 3D
+            geometric scene descriptors, including the Bird's Eye View (BEV) maps and 3D LiDAR bounding boxes. Building
+            on
+            <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for controllable 3D video generation, this
+            track aims to advance scene generation
+            for autonomous driving, ensuring better consistency, higher resolution, and longer duration.
+          </p>
+        </div>
+      </div>
+      <br>
+
+      <div class="row" id="track1">
+        <div class="col-xs-12">
+          <h2>Challenge Progress</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="container" style="max-width: 80%">
+            <canvas id="myChart" height="150"></canvas>
+            <script type="text/javascript" src="js/draw_chart.js"></script>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="track1">
+        <div class="col-xs-12">
+          <h2>Leaderboard</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="CSVTable"></div>
+          <script>
+            $(function () {
+              $("#CSVTable").CSVToTable("data/leaderboard.csv", {
+                tableClass: "table table-striped",
+              });
+            });
+          </script>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h2>Task and Baseline</h2>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            <b>Task</b>: In this challenge, participants should train a controllable multi-view street
+            view video generation model, which is the same as MagicDrive. The generated
+            video should accurately reflect the control signals from <i>BEV road map, 3D
+              bounding boxes and test description of weather and time-of-day</i>. We will
+            evaluate the generated videos from generation quality and controllability
+            (detailed below).
+          </p>
+          <p>
+            <b>Baseline</b>: <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a>.
+            Please checkout to <code>video</code> branch for video generation. To help the
+            participants to start, we have provided a 16-frame version with config and
+            pre-trained weights. Enjoy!
+          </p>
+          <p>
+
+        </div>
+      </div>
+      <br>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Data Description</h2>
+          </p>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            We use the <a href="https://www.nuscenes.org/nuscenes">nuScenes</a> dataset as
+            the testbench for this challenge. nuScenes is a commonly used autonomous driving
+            dataset that provides 6 camera view at 12Hz convering 360-degree of the scenes.
+            Following the official train/val split, teams should use the 750 scenes for
+            training and 150 scenes from validation for evaluation and submission only.
+          </p>
+        </div>
+      </div>
+      <br>
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h2>Detailed Rules and Guidelines</h2>
+          </p>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h3>Data Preparation</h3>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            To start, participants should download the original data from the <a
+              href="https://www.nuscenes.org/download">
+              nuScenes official site</a>.
+            Please note to download camera sweeps (12Hz), only keyframes (2Hz) is not enough.
+            The provided codebase is based on <a
+              href="https://github.com/cure-lab/MagicDrive/tree/video/third_party/bevfusion">mmdet3d</a>,
+            which re-organize the meta data for loading.
+            We provide the following data for to facilitate participants:
+          </p>
+
+          <table class="table table-striped">
+            <thead>
+              <th>Name</th>
+              <th>Description</th>
+              <th>OneDrive</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>data/nuscenes_mmdet3d_2</code>
+                </td>
+                <td>mmdet3d meta data for nuScenes (only keyframes, only for
+                  perception models)</td>
+                <td><a href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/EYF9ZkMHwVZKjrU5CUUPbfYBhC1iZMMnhE2uI2q5iCuv9w?e=UEx9OU">link</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <code>data/nuscenes/interp_12Hz_trainval</code> and<br>
+                  <code>data/nuscenes_mmdet3d-12Hz/*interp*.pkl</code>
+                </td>
+                <td>interpolated 12Hz annotation and mmdet3d meta data (for both training and testing)</td>
+                <td><a
+                    href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/EXunN1j0OmNLtaPoh2VrkgQBGpyXiMlltuCX5GBuYc00YQ?e=bVI9AC">link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>data/nuscenes/advanced_12Hz_trainval</code> and<br>
+                  <code>data/nuscenes_mmdet3d-12Hz/*advanced*.pkl</code>
+                </td>
+                <td>interpolated 12Hz annotation with advanced method from ASAP,
+                  and mmdet3d meta data (optional for training)</td>
+                <td><a
+                    href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/ESxhblchfaJClyAQ435NE5YBAUb80VTurwPxQbtY9PkIzQ?e=nOaoa1">link</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>nuscenes_interp_12Hz_infos_track2_eval.pkl</code>
+                </td>
+                <td>sampled from "interp", for 1st round evaluation and submission</td>
+                <td><a href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/EQ6uR7htWjhGrflYel_TsbIBq1ry0PnvE-nDd9te6XvzZA?e=5KLWgI">link</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <code>nuscenes_interp_12Hz_infos_track2_eval_long.pkl</code>
+                </td>
+                <td>sampled from "interp", for 2nd round evaluation and submission</td>
+                <td><a href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/EQYWxm3EjTNFnPhfCnHwAIkBXGMlamiqAFMYlJ5syL1Fjw?e=M5W9CB">link</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <p>
+            Since the annotation is only at 2Hz, we provide the interpolated
+            annotations from <a href="https://github.com/JeffWang987/ASAP">ASAP</a> in the
+            table above.
+            After download the files above, you should be also to organize them as described
+            in <a href="https://github.com/cure-lab/MagicDrive/tree/video?tab=readme-ov-file#datasets">Datasets</a>.
+          </p>
+          <p>
+            If you find any resources unavailable, or need other resource to run our
+            baseline, please do not hasitate to let us know!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h3>Training</h3>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            Please setup your python environment as described in <a
+              href="https://github.com/cure-lab/MagicDrive/tree/video?tab=readme-ov-file#environment-setup">Environment
+              Setup</a> and prepare the pretrained weights from <a
+              href="https://github.com/cure-lab/MagicDrive/tree/video?tab=readme-ov-file#environment-setup">Pretrained
+              Weights</a>. Then start your training/testing as described in <a
+              href="https://github.com/cure-lab/MagicDrive/tree/video?tab=readme-ov-file#train-magicdrive-t">Train
+              MagicDrive-t</a> and <a
+              href="https://github.com/cure-lab/MagicDrive/tree/video?tab=readme-ov-file#video-generation">Video
+              Generation</a>.
+          </p>
+
+          <p>
+            To run our baseline, please download our pretrained model from <a
+              href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/Ec6fgCLRRflNo1cq7huz_vsBrJAhg4c9mdTLmsIEUMQXrg?e=iTyyf9">OneDrive</a>
+          </p>
+
+          <p>
+            <span style="color: red; font-weight: bold;">Note:</span> Our baseline use the config from <a
+              href="https://github.com/cure-lab/MagicDrive/blob/video/configs/exp/rawbox_mv2.0t_0.4.3.yaml">rawbox_mv2.0t_0.4.3</a>.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h3>Participate</h3>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            <b>Register</b>. Before submission, please register your team information <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvh7zmV6BicQlguOVo0t_N0x7iGCk7td6DMXXWw8-YJbtiyg/viewform">here</a>.
+            Each team can only have one registration, and each registration is valid for one single track. Note that your <code>Team Name</code> will be used as reference for evaluation latter.
+          </p>
+          <p id="submission">
+            <b>Submission</b>. For submission, we require each team to: 
+            <ol>
+            <li>
+            generate 4 16-frame videos for each of the 150 scenes from the <code>eval-standard</code> set (<b>600 videos</b>).
+            </li>
+            <li>
+            generate 3 any-length videos for each of the 3 scenes from the <code>eval-long</code> set (<b>9 videos</b>).
+            </li>
+            </ol>
+            For simplicity, you can use meta data in <code>nuscenes_interp_12Hz_infos_track2_eval.pkl</code> to
+            generate 16-frame videos for submission. If your model is capable of longer video generation, please 
+            use <code>nuscenes_interp_12Hz_infos_track2_eval_long.pkl</code>, and add clips of the first 16 frames 
+            in your submission to round 1. In other words, For the 9 long videos, one of the three should contains
+            the exact content in the 600 videos for the same scene (see <a href="#evaluation">Evaluation</a> for more details).
+            Videos should be generated starting from the <b>first frame</b> of each scene.
+          </p>
+          <p>
+            Videos (<code>mp4</code> files)
+            should be compressed with the provided scripts and renamed accordingly. Please
+            check more details in <a href="https://github.com/pixeli99/W-CODA2024-Track2/blob/main/README.md">readme</a>. We also provide a
+            <a
+              href="https://mycuhk-my.sharepoint.com/:u:/g/personal/1155157018_link_cuhk_edu_hk/ERF-3qcpuBdAt4W8Z6_3AGoBk6FZ0OwPRowtvKd9Ln897w?e=zU2jB6">
+              submission sample</a> to let participants better understand the submission format.
+          </p>
+          <p>
+            Please upload your submission via the
+            <a
+              href="https://mycuhk-my.sharepoint.com/:f:/g/personal/1155157018_link_cuhk_edu_hk/Ej5CrvhUeOpAm9EJGBIV5M4BxGXUbIQuizWWyy1Qqk45JA">
+              Upload link</a>
+            on OneDrive. Enter your Track and Team Name and click Upload.
+          </p>
+          <div class="center" style="text-align:center">
+            <img src="../static/img/site/onedrive_track2.jpg" alt="onedrive_track2" width="45%">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p id="evaluation">
+          <h3>Evaluation</h3>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            There will be 2 rounds for evaluation:
+          <ul>
+            <li>1st round (Jun. 15-Aug. 15): score evaluation for 16-frame videos</li>
+            <li>2nd round (Aug. 15): human evaluation for long videos</li>
+          </ul>
+          </p>
+          <p>
+            <span style="text-decoration:underline;">For the 1st round</span>:
+            we evaluate the generated videos by generation quality
+            and controllability with three metrics:
+          <ul>
+            <li>FVD: commonly used metric for video generation quality evaluation.</li>
+            <li>mAP: from 3D object detection with <a
+                href="https://github.com/Bin-ze/BEVFormer_segmentation_detection">BEVFormer</a>. As defined
+              by nuScenes.</li>
+            <li>mIoU: from BEV segmentation with <a
+                href="https://github.com/Bin-ze/BEVFormer_segmentation_detection">BEVFormer</a>.
+              As defined by their paper.</li>
+          </ul>
+          The final score is calculated with
+          $$\text{score}_{1}=
+          \frac{\text{FVD}-A}{A} +
+          \frac{\text{mAP}-B}{B} +
+          \frac{\text{mIoU}-C}{C}\text{, where } A=218.1200, B=11.8617, C=18.3429
+          $$
+          For more details about how each metric is calculated, please check the
+          provided <a href="https://github.com/pixeli99/W-CODA2024-Track2">evaluation
+            code</a>.
+          </p>
+          <p>
+            <span style="text-decoration:underline;"> For the 2nd round</span>: each
+            team is required to submit <b>9</b> videos (12-fps) from 3 scenes, each with 3
+            different conditions (sunny day, rainy day, and night).
+            Our human evaluators will rank each video from quality and controllability.
+            In general, we prefer long videos with high resolutions.
+          </p>
+
+          <p>
+            We only consider the <b>top-10</b> participants from the 1st round and use the
+            submitted long videos for the 2nd round.
+          </p>
+          <p>
+            <span style="color: red; font-weight: bold;">Note that</span>, we require results generated from
+            one single model for both rounds.
+            To ensure this, the "sunny day" video in the 2nd round should contains the exact
+            content submitted for the 1st round (<i>i.e.</i>, the 16-frame can be clipped from
+            longer videos).
+          </p>
+
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h2>General Rules</h2>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <ul>
+            <li>
+              To ensure fairness, the <b>top-3</b> winners are required to submit a technical report.
+            </li>
+            <li>
+              Each entry is required to be associated to a team and its
+              affiliation (all members of one team must register as one).
+            </li>
+            <li>
+              Using multiple accounts to increase the number of submissions is strictly prohibited.
+            </li>
+            <li>
+              Results should follow the correct format and must be uploaded to the submission
+              to OneDrive (refer to the <a href="#submission">Submission</a> section), which, otherwise, will not be
+              considered as valid submissions. Detailed information about how results will be
+              evaluated is provided in the <a href="#evaluation">Evaluation</a> section.
+            </li>
+            <li>
+              The best entry of each team is public in the leaderboard, and we will update
+              <b>once a week</b>.
+            </li>
+            <li>
+              The organizer reserves the absolute right to disqualify entries that are incomplete, illegible, late, or
+              violating the rules.
             </li>
           </ul>
+          </p>
         </div>
       </div>
-    </div>
-
-    <!-- Title -->
-    <div class="container">
-      <div class="page-content">
-        <p><br /></p>
-        <div class="row">
-          <div class="col-xs-12">
-            <center>
-              <h1>Multimodal Perception and Comprehension of Corner Cases in Autonomous Driving</h1>
-            </center>
-            <center>
-              <h2>ECCV 2024 Workshop @ Milano, Italy, Sep 30th Monday</h2>
-            </center>
-          </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          <h2>Awards</h2>
+          </p>
         </div>
-        <hr />
-
-        <!-- Track 1 -->
-        <div class="row" id="track1">
-          <div class="col-xs-12">
-            <h2>Track 2: Corner Case Scene Generation</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <p>
-              This track focuses on improving the capabilities of diffusion models to create multi-view street scene videos that are consistent with 3D
-              geometric scene descriptors, including the Bird's Eye View (BEV) maps and 3D LiDAR bounding boxes. Building on
-              <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for controllable 3D video generation, this track aims to advance scene generation
-              for autonomous driving, ensuring better consistency, higher resolution, and longer duration.
-            </p>
-            <ul>
-              <li>
-                <b>Datasets:</b> Please refer to <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for detailed dataset introduction and dataset
-                downloads (i.e.,
-                <thead></thead>
-                <a href="https://www.nuscenes.org/">nuScenes</a> dataset).
-              </li>
-              <li><b>Submission:</b> Under construction. Stay tuned :).</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row" id="track1">
-          <div class="col-xs-12">
-            <h2>Challenge Progress</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="container" style="max-width: 80%">
-              <canvas id="myChart" height="150"></canvas>
-              <script type="text/javascript" src="js/draw_chart.js"></script>
-            </div>
-          </div>
-        </div>
-
-        <div class="row" id="track1">
-          <div class="col-xs-12">
-            <h2>Leaderboard</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="CSVTable"></div>
-            <script>
-              $(function () {
-                $("#CSVTable").CSVToTable("data/leaderboard.csv", {
-                  tableClass: "table table-striped",
-                });
-              });
-            </script>
-          </div>
-        </div>
-
-        <div class="row" id="contact">
-          <div class="col-xs-12">
-            <h2>Contact</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <p>
-              To contact the organizers please use
-              <b>w-coda2024@googlegroups.com</b>
-            </p>
-          </div>
-        </div>
-
-        <hr />
       </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+          Participants with the most successful and innovative entries will be invited to present at this workshop and receive awards. A 1,000 USD cash prize will be awarded to the top team, while the 2nd and 3rd will be awarded with 800 USD and 600 USD separately.
+          </p>
+
+        </div>
+      </div>
+      <br>
+
+      <div class="row" id="contact">
+        <div class="col-xs-12">
+          <h2>Contact</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            To contact the organizers please use
+            <b>w-coda2024@googlegroups.com</b>
+          </p>
+        </div>
+      </div>
+
+      <hr />
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

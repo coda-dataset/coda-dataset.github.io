@@ -61,7 +61,15 @@
       <div class="navbar-collapse collapse" id="navbar-main">
         <ul class="nav navbar-nav">
           <li><a href="#intro">Introduction</a></li>
-          <li><a href="#challenges">Challenges</a></li>
+          <!--<li><a href="#challenges">Challenges</a></li>-->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Challenges<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="track1/">Track 1: Understanding</a></li>
+              <li><a href="track2/">Track 2: Generation</a></li>
+            </ul>
+          </li>
           <li><a href="#cfp">Call for Papers</a></li>
           <li><a href="#dates">Schedule</a></li>
           <!-- <li><a href="#speakers">Invited Speake 	rs</a></li> -->
@@ -111,20 +119,20 @@
         <div class="center" style="text-align:center">
           <img src="static/img/site/codalm-teaser.jpg" width="90%">
           <p style="text-align:center">Visual comprehension data samples from <a
-              href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a>.<br /><br /></p>
+              href="https://coda-dataset.github.io/coda-lm/" target="__blank">CODA-LM</a>.<br /><br /></p>
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="center" style="text-align:center">
           <img src="static/img/site/magicdrive-teaser.png">
           <p style="text-align:center">Street view images generated with <a
-              href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br /><br /></p>
+              href="https://gaoruiyuan.com/magicdrive/" target="__blank">MagicDrive</a>.<br /><br /></p>
 
           <video id="replay-video" muted preload playsinline autoplay loop width="95%">
             <source src="static/img/site/magicdrive-vid.mp4" type="video/mp4" />
           </video>
           <p style="text-align:center">Street view videos generated with <a
-              href="https://gaoruiyuan.com/magicdrive/">MagicDrive</a>.<br /><br /></p>
+              href="https://gaoruiyuan.com/magicdrive/" target="__blank">MagicDrive</a>.<br /><br /></p>
         </div>
       </div>
 
@@ -179,13 +187,13 @@
           <p>
             This track is designed to enhance perception and comprehension abilities of MLLMs for autonomous driving,
             focusing on global scene understanding, regional reasoning, and actionable suggestions.
-            With the <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> dataset consisting of 5,000 images
+            With the <a href="https://coda-dataset.github.io/coda-lm/" target="__blank">CODA-LM</a> dataset consisting of 5,000 images
             with textual descriptions covering global driving scenarios, detailed analyses of corner cases, and future
             driving recommendation, this track seeks to promote the development of more reliable and interpretable
             autonomous driving agents.
           </p>
           <ul>
-            <li><b>Datasets:</b> Please refer to <a href="https://coda-dataset.github.io/coda-lm/">CODA-LM</a> for
+            <li><b>Datasets:</b> Please refer to <a href="https://coda-dataset.github.io/coda-lm/" target="__blank">CODA-LM</a> for
               detailed dataset introduction and dataset downloads.</li>
             <li>Please find more information on the <a href="track1">Track1 page</a>.</li>
           </ul>
@@ -204,14 +212,14 @@
           <p>
             This track focuses on improving the capabilities of diffusion models to create multi-view street scene
             videos that are consistent with 3D geometric scene descriptors, including the Bird's Eye View (BEV) maps and
-            3D LiDAR bounding boxes. Building on <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for
+            3D LiDAR bounding boxes. Building on <a href="https://github.com/cure-lab/MagicDrive" target="__blank">MagicDrive</a> for
             controllable 3D video generation, this track aims to advance scene generation for autonomous driving,
             ensuring better consistency, higher resolution, and longer duration.
           </p>
           <ul>
-            <li><b>Datasets:</b> Please refer to <a href="https://github.com/cure-lab/MagicDrive">MagicDrive</a> for
+            <li><b>Datasets:</b> Please refer to <a href="https://github.com/cure-lab/MagicDrive" target="__blank">MagicDrive</a> for
               detailed dataset introduction and dataset downloads (i.e., <thead></thead> <a
-                href="https://www.nuscenes.org/">nuScenes</a> dataset).
+                href="https://www.nuscenes.org/" target="__blank">nuScenes</a> dataset).
             </li>
             <li>Please find more information on the <a href="track2">Track2 page</a>.</li>
           </ul>
@@ -255,9 +263,9 @@
               to 14 pages, including both figures and tables, in ECCV format with extra pages containing only cited
               references allowed. Accepted papers will be part of the official ECCV proceedings. <br />
               <a
-                href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WuA4JS5uZpi">[Download
+                href="https://www.overleaf.com/latex/templates/springer-lecture-notes-in-computer-science/kzwwpvhwnvfj#.WuA4JS5uZpi" target="__blank">[Download
                 LaTex Template]</a><br />
-              <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA">[OpenReview Submission
+              <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA" target="__blank">[OpenReview Submission
                 Site]</a>
             </li>
             <li>
@@ -265,8 +273,8 @@
               form in any other peer-reviewed venues including journals, conferences or workshops. Papers are limited to
               4 pages, and will NOT be included in official ECCV proceedings (non-archival), which are allowed for
               re-submission to later conferences. <br />
-              <a href="https://github.com/cvpr-org/author-kit/releases">[Download LaTex Template]</a> <br />
-              <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA_Abstract_Paper_Track">[OpenReview
+              <a href="https://github.com/cvpr-org/author-kit/releases" target="__blank">[Download LaTex Template]</a> <br />
+              <a href="https://openreview.net/group?id=thecvf.com/ECCV/2024/Workshop/W-CODA_Abstract_Paper_Track" target="__blank">[OpenReview
                 Submission Site]</a>
             </li>
           </ul>
@@ -436,21 +444,21 @@ TBD. -->
           <!-- <div class="container" style="max-width: 100%; margin-left:auto; margin-right:auto"> -->
           <div class="organizers-container">
             <div class="organizer-col">
-              <a href="https://kaichen1998.github.io/">
+              <a href="https://kaichen1998.github.io/" target="__blank">
                 <img class="people-pic" src="static/img/people/chenkai.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://kaichen1998.github.io/">Kai Chen</a>
+                <a href="https://kaichen1998.github.io/" target="__blank">Kai Chen</a>
                 <h6>HKUST</h6>
               </div>
             </div>
 
             <div class="organizer-col">
-              <a href="https://gaoruiyuan.com/">
+              <a href="https://gaoruiyuan.com/" target="__blank">
                 <img class="people-pic" src="static/img/people/gaoruiyuan.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://gaoruiyuan.com/">Ruiyuan Gao</a>
+                <a href="https://gaoruiyuan.com/" target="__blank">Ruiyuan Gao</a>
                 <h6>CUHK</h6>
               </div>
             </div>
@@ -472,21 +480,21 @@ TBD. -->
             </div>
 
             <div class="organizer-col">
-              <a href="https://stephenjia.github.io/">
+              <a href="https://stephenjia.github.io/" target="__blank">
                 <img class="people-pic" src="static/img/people/jiaxu.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://stephenjia.github.io/">Xu Jia</a>
+                <a href="https://stephenjia.github.io/" target="__blank">Xu Jia</a>
                 <h6>DLUT</h6>
               </div>
             </div>
 
             <div class="organizer-col">
-              <a href="https://sites.google.com/it-caesar.de/homepage/">
+              <a href="https://sites.google.com/it-caesar.de/homepage/" target="__blank">
                 <img class="people-pic" src="static/img/people/holger.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://sites.google.com/it-caesar.de/homepage/">Holger Caesar</a>
+                <a href="https://sites.google.com/it-caesar.de/homepage/" target="__blank">Holger Caesar</a>
                 <h6>TU Delft</h6>
               </div>
             </div>
@@ -531,11 +539,11 @@ TBD. -->
             </div>
 
             <div class="organizer-col">
-              <a href="https://www.cse.cuhk.edu.hk/~qxu/">
+              <a href="https://www.cse.cuhk.edu.hk/~qxu/" target="__blank">
                 <img class="people-pic" src="static/img/people/xuqiang.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://www.cse.cuhk.edu.hk/~qxu/">Qiang Xu</a>
+                <a href="https://www.cse.cuhk.edu.hk/~qxu/" target="__blank">Qiang Xu</a>
                 <h6>CUHK</h6>
               </div>
             </div>
@@ -551,11 +559,11 @@ TBD. -->
             </div>
 
             <div class="organizer-col">
-              <a href="https://sites.google.com/view/dyyeung/home">
+              <a href="https://sites.google.com/view/dyyeung/home" target="__blank">
                 <img class="people-pic" src="static/img/people/dyyeung.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://sites.google.com/view/dyyeung/home">Dit-Yan Yeung</a>
+                <a href="https://sites.google.com/view/dyyeung/home" target="__blank">Dit-Yan Yeung</a>
                 <h6>HKUST</h6>
               </div>
             </div>
@@ -592,11 +600,11 @@ TBD. -->
             </div>
 
             <div class="organizer-col">
-              <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">
+              <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en" target="__blank">
                 <img class="people-pic" src="static/img/people/Lipengxiang.jpg" />
               </a>
               <div class="people-name">
-                <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en">Pengxiang Li</a>
+                <a href="https://scholar.google.com/citations?user=rUp_4RgAAAAJ&hl=en" target="__blank">Pengxiang Li</a>
                 <h6>DLUT</h6>
               </div>
             </div>
