@@ -1,2 +1,7 @@
-Team Name,General Perception,Region Perception,Driving Suggestion,Final Score
-Organizer Baseline (LLaVA-1.5-7B),19.30,42.06,23.16,28.17
+Team Name,Final Score,General Perception,Region Perception,Driving Suggestion
+42,52.59,41.68,66.52,49.56
+TheCatIsWatchingYou,50.02,34.18,68.30,47.58
+TacoTuesday,49.87,39.34,62.31,47.96
+FIGHTINGGOGO,47.28,35.90,64.59,41.34
+Organizer Baseline (LLaVA-1.5-7B),28.17,19.30,42.06,23.16
+SpatialAD,28.07,17.56,44.48,22.16

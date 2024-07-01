@@ -5,7 +5,7 @@ var chart = new Chart(ctx, {
         datasets: [
         {
             type: 'line',
-            yAxisID: 'score',
+            yAxisID: 'Score',
             // backgroundColor: 'transparent',
             backgroundColor: 'rgba(255, 99, 132, 0.1)',
             borderColor: 'rgb(255, 99, 132)',
