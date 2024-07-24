@@ -2,4 +2,5 @@ Team Name,FVD,Object mAP,Map mIoU,Final Score
 LiAuto-AD,108.1732,13.6006,24.2159,0.9708
 seed0,210.4000,12.0476,18.2735,0.0473
 <i>Organizer Baseline (MagicDrive)</i>,218.1200,11.8617,18.3429,0
+AIR-SUN,221.8281,11.8165,18.4400,-0.0155
 SpeedSpecters,217.9430,11.4926,18.2672,-0.0344
