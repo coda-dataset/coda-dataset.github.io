@@ -133,6 +133,8 @@
           </div>
         </div>
         <ul>
+          <li>[2024.08.03] We find potential <code>multi-registration</code> of team members from the same team. As emphasized in the <a href="./index.html#rules">General Rules</a>, using multiple accounts to increase the number of submissions is strictly prohibited for the W-CODA competitons.
+</li>
           <li>[2024.07.21] To clarify, we expect <code>a single model</code> to deal with all three tasks simultaneously. Submissions utilizing different models for different tasks will be considered illegal.
 </li>
           <li>[2024.07.15] We have noticed for the <code>regional perception</code> task, one can access each object's ground truth <code>category name</code> by comparing the annotations of CODA-LM and CODA datasets. Although it is <code>not intended by design</code>, here we confirm that it is <code>allowed</code>, especially considering the primary goal of regional perception is to evaluate the capability of LVLMs in describing the given objects and why they affect self-driving in natural languages. We make this announcement to let every participant know about that for fairness consideration. 
@@ -161,18 +163,17 @@
         <div class="row" id="leaderboard">
           <div class="col-xs-12">
             <h2>Leaderboard</h2>
-          <p>Last update: July 27th, 2024</p>
+          <p>Last update: Aug 3rd, 2024</p>
           <p>We are glad to receive submissions from all over the world. Unfornately, we still receive illegal submissions failing to follow submission requirements. We list potential mistakes below. If your results are not presented or updated in the leaderboard, check your submission files, make re-submission, and wait for the next evaluation turn.
           <ul>
             <li>Submission files are named with <code>&nbsp;results.zip</code> or <code>result.zip</code>.</li>
+            <ul><li>Big_Elephant, passionfruit & SU8.</li></ul>
             <li>The names of <code>.jsonl</code> files do not end with <code>_answer.jsonl</code>.</li>
             <li>The <code>.jsonl</code> files do not present in the root folder of the submission files.</li>
             <li>Empty <code>.jsonl</code> files.</li>
             <li>More or less predictions in the <code>.jsonl</code> files.</li>
             <li>Modify the information provided in the <code>.jsonl</code> files (e.g., <code>"id"</code> instead of <code>"question_id"</code>).</li>
-            <ul><li>IEIT-AD (General & Regional).</li></ul>
             <li>Fail to follow the required dictionary format.</li>
-            <ul><li>TeamB (Regional).</li></ul>
           </ul>
 
           </p>
