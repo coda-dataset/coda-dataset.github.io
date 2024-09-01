@@ -126,6 +126,61 @@
         </div>
         <p><br /></p>
 
+        <div class="row" id="winners">
+          <div class="col-xs-12">
+            <p>
+            <h2>&#127942; <span style="background-color: yellow">Winners</span></h2>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <table class="table table-striped" id="rand_table">
+              <thead>
+                <th width="15%">Rank</th>
+                <th width="25%">Team Name</th>
+                <th width="60%">Affiliation(s)</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    1<sup>st</sup>
+                  </td>
+                  <td>
+                    llmforad
+                  </td>
+                  <td>
+                    The Chinese University of Hong Kong (Shenzhen), Hong Kong University of Science and Technology
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    2<sup>nd</sup>
+                  </td>
+                  <td>
+                    OpenDriver
+                  </td>
+                  <td>
+                    Peking University
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    3<sup>rd</sup>
+                  </td>
+                  <td>
+                    NexusAD
+                  </td>
+                  <td>
+                    Chongqing University of Post and Telecommunications
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <br>
+
         <!-- Announcement -->
         <div class="row" id="announcement">
           <div class="col-xs-12">
@@ -133,6 +188,7 @@
           </div>
         </div>
         <ul>
+          <li>[2024.09.01] The verified Best-of-all-rounds leaderboard and Top-3 winners have been released!
           <li>[2024.08.17] The Best-of-all-rounds leaderboard has been released! Note the leaderboard is temporal, waiting for verification. Thanks for all participants!
           <li>[2024.08.15] Frequently asked questions we received:
             <ul>
@@ -178,7 +234,8 @@
         <!-- Leaderboard -->
         <div class="row" id="leaderboard">
           <div class="col-xs-12">
-            <h2>Leaderboard (Best of All Rounds, Temporally)</h2>          
+            <h2>Leaderboard (Best of All Rounds)</h2>          
+            <p><b>We have removed team submissions violating the competition rules.</b></p>
           </div>
         </div>
         <div class="row">
@@ -193,46 +250,8 @@
             </script>
           </div>
         </div>
-        <p><br /></p>
-
-        <!-- Leaderboard -->
-        <div class="row" id="leaderboard">
-          <div class="col-xs-12">
-            <h2>Leaderboard (240815 Round)</h2>
-          <p>Last update: Aug 17th, 2024</p>
-          <p>We are glad to receive submissions from all over the world. Unfornately, we still receive illegal submissions failing to follow submission requirements. We list potential mistakes below. 
-          <!-- If your results are not presented or updated in the leaderboard, check your submission files, make re-submission, and wait for the next evaluation turn. -->
-          <ul>
-            <li>Submission files are named with <code>&nbsp;results.zip</code> or <code>result.zip</code>.</li>
-            <li>The names of <code>.jsonl</code> files do not end with <code>_answer.jsonl</code>.</li>
-            <li>The <code>.jsonl</code> files do not present in the root folder of the submission files.</li>
-            <li>Empty <code>.jsonl</code> files.</li>
-            <li>More or less predictions in the <code>.jsonl</code> files.</li>
-            <ul><li>Gavin.</li></ul>
-            <li>Modify the information provided in the <code>.jsonl</code> files (e.g., <code>"id"</code> instead of <code>"question_id"</code>).</li>
-            <ul><li>CTAI_LAB.</li></ul>
-            <li>Fail to follow the required dictionary format.</li>
-            <ul><li>LiAD.</li></ul>
-          </ul>
-
-          </p>
-          
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div id="CSVTable2"></div>
-            <script>
-              $(function () {
-                $("#CSVTable2").CSVToTable("data/leaderboard_0815.csv", {
-                  tableClass: "table table-striped",
-                });
-              });
-            </script>
-          </div>
-        </div>
-        <hr />
         <!-- <p><br /></p> -->
+        <hr />
 
         
         <!-- Task Description -->
